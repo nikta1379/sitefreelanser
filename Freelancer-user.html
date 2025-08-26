@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>پنل کاربری فریلنسر</title>
+  <!-- Bootstrap RTL -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #f4f6f9;
+      font-family: tahoma, sans-serif;
+    }
+    .sidebar {
+      width: 250px;
+      height: 100vh;
+      background: #0d6efd;
+      color: #fff;
+      position: fixed;
+      top: 0;
+      right: 0;
+      padding-top: 60px;
+    }
+    .sidebar a {
+      display: block;
+      color: #fff;
+      padding: 12px 20px;
+      text-decoration: none;
+    }
+    .sidebar a:hover {
+      background: rgba(255,255,255,0.2);
+    }
+    .content {
+      margin-right: 250px;
+      padding: 20px;
+    }
+    .topbar {
+      position: fixed;
+      top: 0;
+      right: 250px;
+      left: 0;
+      height: 60px;
+      background: #fff;
+      border-bottom: 1px solid #ddd;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      padding: 0 20px;
+      z-index: 1000;
+    }
+    .topbar .profile {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .topbar img {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- سایدبار -->
+  <div class="sidebar">
+    <h5 class="text-center py-3">منوی فریلنسر</h5>
+    <a href="#"><i class="fa fa-home me-2"></i> خانه</a>
+    <a href="#"><i class="fa fa-briefcase me-2"></i> پروژه‌های من</a>
+    <a href="#"><i class="fa fa-envelope me-2"></i> پیام‌ها</a>
+    <a href="#"><i class="fa fa-wallet me-2"></i> مالی و پرداخت‌ها</a>
+    <a href="#"><i class="fa fa-cog me-2"></i> تنظیمات حساب</a>
+  </div>
+
+  <!-- هدر -->
+  <div class="topbar">
+    <div class="me-3">
+      <i class="fa fa-bell fa-lg text-secondary"></i>
+    </div>
+    <div class="profile">
+      <img src="https://via.placeholder.com/40" alt="profile">
+      <span>علی رضایی</span>
+      <a href="#" class="btn btn-sm btn-outline-danger ms-2">خروج</a>
+    </div>
+  </div>
+
+  <!-- بخش اصلی -->
+  <div class="content">
+    <h2 class="mt-5">خوش آمدید، علی!</h2>
+    <p>اینجا نمای کلی از فعالیت‌های شما نمایش داده می‌شود.</p>
+
+    <div class="row mt-4">
+      <div class="col-md-3">
+        <div class="card shadow-sm">
+          <div class="card-body text-center">
+            <h5>پروژه‌های فعال</h5>
+            <p class="fs-3 text-primary">4</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="card shadow-sm">
+          <div class="card-body text-center">
+            <h5>درآمد کل</h5>
+            <p class="fs-3 text-success">2,300,000 تومان</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="card shadow-sm">
+          <div class="card-body text-center">
+            <h5>پیام‌های جدید</h5>
+            <p class="fs-3 text-warning">7</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="card shadow-sm">
+          <div class="card-body text-center">
+            <h5>اشتراک</h5>
+            <p class="fs-6">پلن 3 ماهه فعال</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
