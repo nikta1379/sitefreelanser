@@ -116,7 +116,7 @@ footer.sb{background:var(--blue);color:var(--white)}
 .sb .col a{display:block;color:#fff;padding:6px 0;font-weight:500;text-decoration:none;opacity:.9}
 .sb .col a:hover{opacity:1;text-decoration:underline;text-decoration-color:#fff}
 .sb .enamad{display:flex;align-items:flex-start;justify-content:flex-end}
-.sb .enamad img{height:140px;width:auto;background:#fff;border-radius:10px;padding:6px;display:block}
+.sb .enamad img{height:140px;width:auto;border-radius:10px;padding:6px;display:block}
 .sb .bottom{text-align:center;padding-top:8px;font-size:13.5px;opacity:.95}
 @media(max-width:900px){.sb .cols{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:620px){.sb .top{flex-direction:column;gap:10px}.sb .cols{grid-template-columns:1fr}.sb .enamad{justify-content:flex-start}}
