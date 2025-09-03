@@ -1,146 +1,1395 @@
 <!DOCTYPE html>
-<html lang="fa">
+<html lang="fa" dir="rtl">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>فروشگاه خدمات فریلنسری</title>
-  <link rel="stylesheet" href="./assets/css/shop.css" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>PortfolioHub — گالری الهام‌بخش طراحان</title>
+    <meta name="description"
+        content="یک لندینگ الهام‌گرفته از شبکه‌های نمایش آثار؛ طراحی تمیز، سریع و واکنش‌گرا با Masonry Grid." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;600;700&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
 </head>
+
 <body>
-  <header>
-  <div class="navbar">
-    <div class="cluster">
-      <div class="toggle" id="tFreelancer" aria-expanded="false" aria-controls="pFreelancer">
-        <span class="icon" aria-hidden="true">
-          <svg fill="none" viewBox="0 0 24 24" stroke-width="2">
-            <rect x="3" y="4" width="18" height="12" rx="2"></rect>
-            <path d="M8 20h8M12 16v4"></path>
-          </svg>
-        </span>
-        <span class="label">فریلنسر هستم</span>
-        <span class="plus">+</span>
-      </div>
-      <div class="toggle" id="tEmployer" aria-expanded="false" aria-controls="pEmployer">
-        <span class="icon" aria-hidden="true">
-          <svg fill="none" viewBox="0 0 24 24" stroke-width="2">
-            <path d="M9 6V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v1"></path>
-            <rect x="3" y="7" width="18" height="12" rx="2"></rect>
-            <path d="M3 12h18"></path>
-          </svg>
-        </span>
-        <span class="label">کارفرما هستم</span>
-        <span class="plus">+</span>
-      </div>
-      <nav class="panel" id="pFreelancer">
-        <h4>فریلنسر — شروع سریع</h4>
-        <a href="">راهنمای شروع برای فریلنسر</a>
-        <a href="#f-plans">پلن‌های همکاری</a>
-      </nav>
-      <nav class="panel" id="pEmployer" data-side="employer">
-        <h4>کارفرما — شروع سریع</h4>
-        <a href="./rahnamakarfarma.html">راهنمای شروع برای کارفرما</a>
-        <a href="#e-plans">پلن‌های همکاری</a>
-      </nav>
-    </div>
-
-    <a class="logo" href="#home"><span class="logo-mark"></span><span>اسنپ‌برند</span></a>
-
-    <div class="navlinks">
-      <a class="link" href="#home">خانه</a>
-      <a class="link" href="#store">فروشگاه</a>
-      <span class="divider"></span>
-      <a class="btn" href="#signup">ثبت‌نام</a>
-      <a class="btn" href="#login">
-        <span class="icon" aria-hidden="true">
-          <svg fill="none" viewBox="0 0 24 24" stroke-width="2">
-            <circle cx="12" cy="8" r="4"></circle>
-            <path d="M4 20c2-4 6-6 8-6s6 2 8 6"></path>
-          </svg>
-        </span>
-        <span>ورود</span>
-      </a>
-    </div>
-  </div>
-</header>
-  <br><br><br><br><br><br>
-  <header class="header-1">
-
-    <h1>فروشگاه خدمات</h1>
-    <input type="text" id="search" placeholder="جستجوی خدمت..." />
-  </header>
-  
-  <!-- Category Section -->
-  <section class="categories">
-    <div class="category-container">
-      <button class="category-btn active" data-category="all">همه</button>
-      <button class="category-btn" data-category="graphic-design">طراحی گرافیک</button>
-      <button class="category-btn" data-category="digital-art">تصویرسازی و هنر دیجیتال</button>
-      <button class="category-btn" data-category="video-animation">ویدیو، موشن و انیمیشن</button>
-      <button class="category-btn" data-category="audio-music">صدا و موسیقی</button>
-      <button class="category-btn" data-category="copywriting">کپی‌رایتینگ و تولید محتوا</button>
-      <button class="category-btn" data-category="social-media">مدیریت شبکه‌های اجتماعی</button>
-      <button class="category-btn" data-category="web-design">طراحی و توسعه وب‌سایت</button>
-      <button class="category-btn" data-category="programming">برنامه‌نویسی و توسعه نرم‌افزار</button>
-      <button class="category-btn" data-category="ai-data">هوش مصنوعی و علم داده</button>
-      <button class="category-btn" data-category="seo-marketing">سئو و بازاریابی دیجیتال</button>
-    </div>
-  </section>
-  
-  <main>
-    <div class="slider">
-        <div class="slides">
-            <div class="slide active">
-                <img src="https://via.placeholder.com/800x400/3498db/ffffff?text=Slide+1" alt="عکس اول">
+    <header>
+        <div class="navbar">
+            <div class="cluster">
+            <a class="link" href="./shop.html">فروشگاه</a>
             </div>
-            <div class="slide">
-                <img src="https://via.placeholder.com/800x400/e74c3c/ffffff?text=Slide+2" alt="عکس دوم">
+
+            <a class="logo" href="./index.html"><img src="./assets/img/logo png 2_103307.png" alt=""></a>
+
+            <div class="navlinks">
+                <a class="link" href="./index.html">خانه</a>
+                <span class="divider"></span>
+                <a class="btn" href="./Registration.html">ثبت‌نام</a>
+                <a class="btn" href="./login.html">ورود</a>
+                    </span>
+                    
+                </a>
             </div>
         </div>
-        <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
-        <button class="next" onclick="changeSlide(1)">&#10095;</button>
-    </div>
-  </main>
+    </header>
 
-  <section class="grid" id="productGrid">
-    <!-- کارت‌ها به صورت داینامیک اضافه می‌شن -->
-  </section>
-  <footer>
-    <div class="footer-container">
-      <!-- ستون اول -->
-      <div class="footer-column">
-        <ul>
-          <li><a href="./rahnamafreelancer.html">راهنمای شروع برای فریلنسر</a></li>
-          <li><a href="./frilancer-panel.html">پروفایل کاربری فریلنسر</a></li>
-          <li><a href="./regesterplans.html">پلن‌های همکاری برای فریلنسر</a></li>
-          <li><a href="#">کافه فریلنسر</a></li>
-        </ul>
-      </div>
-
-      <!-- ستون دوم -->
-      <div class="footer-column">
-        <ul>
-          <li><a href="#">راهنمای شروع برای کارفرما</a></li>
-          <li><a href="./porofile.html">پروفایل کاربری کارفرما</a></li>
-          <li><a href="./contact-use.html">تماس با ما</a></li>
-          <li><a href="./about_us.html">درباره با ما</a></li>
-          <li><a href="./plan.html">پلن‌های همکاری برای کارفرما</a></li>
-        </ul>
-      </div>
-
-      <!-- ستون سوم -->
-      <div class="footer-column">
-        <h4>شبکه‌های اجتماعی</h4>
-        <div class="social-icons">
-          <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-          <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-          <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+    <div class="slider-container">
+        <div class="slider">
+            <div class="slide slide-1">
+                <div class="slide-content">
+                    <h2>SNAP BRAND</h2>
+                    <p>کار بگیر، برون دردسر!!!</p>
+                    <a href="#" class="btn">همین حالا شروع کنید</a>
+                </div>
+            </div>
+            <div class="slide slide-2">
+                <div class="slide-content">
+                    <h2>SNAP BRAND</h2>
+                    <p>۵<br>دیکه دیال کارنکرد<br>مباد سراغت!!</p>
+                    <a href="#" class="btn">مشاهده خدمات</a>
+                </div>
+            </div>
+            <div class="slide slide-3">
+                <div class="slide-content">
+                    <h2>SNAP BRAND</h2>
+                    <p>السنت الإمنی<br>السنة برند<br>اتباطاع جدید بسازا!</p>
+                    <a href="#" class="slide-btn">بیشتر بدانید</a>
+                </div>
+            </div>
         </div>
-      </div>
+
+        <div class="arrow arrow-left"><i class="fas fa-chevron-right"></i></div>
+        <div class="arrow arrow-right"><i class="fas fa-chevron-left"></i></div>
+
+        <div class="slider-controls">
+            <div class="slider-control active"></div>
+            <div class="slider-control"></div>
+            <div class="slider-control"></div>
+        </div>
     </div>
-  </footer>
 
+    <div class="search-full-width">
+        <div class="search-container">
+            <div class="topbar">
+                <button class="filter-btn" onclick="openFilters()">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="black" width="18"
+                        height="18">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M3 5h18M6 12h12M10 19h4" />
+                    </svg>
+                    فیلتر
+                </button>
+            </div>
+            <div class="search-box">
+                <svg class="search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <path d="m21 21-4.35-4.35"></path>
+                </svg>
+                <input type="text" class="search-input" placeholder="جستجو در پروژه‌ها، مهارت‌ها، طراحان و..."
+                    id="mainSearch">
+            </div>
+        </div>
+    </div>
 
-  <script src="./assets/js/shop.js"></script>
+    <div id="drawer" class="drawer" aria-hidden="true">
+        <div class="backdrop" onclick="closeFilters()"></div>
+        <aside class="panel" role="dialog" aria-modal="true" aria-labelledby="filterTitle">
+            <div class="panel-head">
+                <div id="filterTitle" onclick="openFilters()"><strong onclick="">فیلترها</strong> <span class="pill" id="selCount">۰ انتخاب</span></div>
+                <button class="btn" onclick="closeFilters()">بستن ×</button>
+            </div>
+            <div class="panel-body" id="filterBody">
+                <div class="section">
+                    <button class="acc" aria-expanded="false">
+                        دسته‌بندی‌ها
+                        <span class="note"></span>
+                        <span class="chev">▾</span>
+                    </button>
+                    <div class="panelx">
+                        <div class="inside-search"><input id="catSearch" placeholder="جستجو در دسته‌ها…"></div>
+                        <div id="catList" class="list">
+                            <label class="item"><input type="checkbox" name="cat" value="طراحی گرافیک"> طراحی
+                                گرافیک</label>
+                            <label class="item"><input type="checkbox" name="cat" value="تصویرسازی و هنر دیجیتال">
+                                تصویرسازی و هنر دیجیتال</label>
+                            <label class="item"><input type="checkbox" name="cat" value="ویدیو، موشن و انیمیشن"> ویدیو،
+                                موشن و انیمیشن</label>
+                            <label class="item"><input type="checkbox" name="cat" value="صدا و موسیقی"> صدا و
+                                موسیقی</label>
+                            <label class="item"><input type="checkbox" name="cat" value="کپی‌رایتینگ">
+                                کپی‌رایتینگ</label>
+                            <label class="item"><input type="checkbox" name="cat"
+                                    value="مدیریت شبکه‌های اجتماعی و تولید محتوا"> مدیریت شبکه‌های اجتماعی و تولید
+                                محتوا</label>
+                            <label class="item"><input type="checkbox" name="cat" value="طراحی و توسعه وب‌سایت"> طراحی و
+                                توسعه وب‌سایت</label>
+                            <label class="item"><input type="checkbox" name="cat"
+                                    value="برنامه‌نویسی و توسعه نرم‌افزار"> برنامه‌نویسی و توسعه نرم‌افزار</label>
+                            <label class="item"><input type="checkbox" name="cat" value="هوش مصنوعی و علم داده"> هوش
+                                مصنوعی و علم داده</label>
+                            <label class="item"><input type="checkbox" name="cat" value="سئو و بازاریابی دیجیتال"> سئو و
+                                بازاریابی دیجیتال</label>
+                            <label class="item"><input type="checkbox" name="cat" value="عکاسی"> عکاسی</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <button class="acc" aria-expanded="false">
+                        وضعیت همکاری
+                        <span class="chev">▾</span>
+                    </button>
+                    <div class="panelx">
+                        <label class="item"><input type="radio" name="availability" value="" checked> همه</label>
+                        <label class="item"><input type="radio" name="availability" value="تمام‌وقت"> تمام‌وقت</label>
+                        <label class="item"><input type="radio" name="availability" value="پروژه‌ای / فریلنس"> پروژه‌ای
+                            / فریلنس</label>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <button class="acc" aria-expanded="false">
+                        موقعیت مکانی
+                        <span class="chev">▾</span>
+                    </button>
+                    <div class="panelx">
+                        <div class="row">
+                            <select id="country" class="input">
+                                <option value="">انتخاب کشور/منطقه</option>
+                                <option>ایران</option>
+                                <option>ترکیه</option>
+                                <option>امارات</option>
+                                <option>کانادا</option>
+                                <option>آلمان</option>
+                            </select>
+                        </div>
+                        <div class="row" style="margin-top:8px">
+                            <input id="city" class="input" placeholder="شهر">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <button class="acc" aria-expanded="false">
+                        ابزارها و اپ‌ها
+                        <span class="note"></span>
+                        <span class="chev">▾</span>
+                    </button>
+                    <div class="panelx">
+                        <div class="inside-search"><input id="toolSearch" placeholder="جستجو در ابزارها…"></div>
+                        <div id="toolList" class="list">
+                            <label class="item"><input type="checkbox" name="tool" value="Adobe Photoshop"> Adobe
+                                Photoshop</label>
+                            <label class="item"><input type="checkbox" name="tool" value="Adobe Illustrator"> Adobe
+                                Illustrator</label>
+                            <label class="item"><input type="checkbox" name="tool" value="Adobe InDesign"> Adobe
+                                InDesign</label>
+                            <label class="item"><input type="checkbox" name="tool" value="Adobe After Effects"> Adobe
+                                After Effects</label>
+                            <label class="item"><input type="checkbox" name="tool" value="Adobe Premiere Pro"> Adobe
+                                Premiere Pro</label>
+                            <label class="item"><input type="checkbox" name="tool" value="Adobe Lightroom"> Adobe
+                                Lightroom</label>
+                            <label class="item"><input type="checkbox" name="tool" value="Adobe Audition"> Adobe
+                                Audition</label>
+                            <label class="item"><input type="checkbox" name="tool" value="Adobe XD"> Adobe XD</label>
+                            <label class="item"><input type="checkbox" name="tool" value="Figma"> Figma</label>
+                            <label class="item"><input type="checkbox" name="tool" value="Sketch"> Sketch</label>
+                            <label class="item"><input type="checkbox" name="tool" value="Canva"> Canva</label>
+                            <label class="item"><input type="checkbox" name="tool" value="CorelDRAW"> CorelDRAW</label>
+                            <label class="item"><input type="checkbox" name="tool" value="Affinity Designer"> Affinity
+                                Designer</label>
+                            <label class="item"><input type="checkbox" name="tool" value="Affinity Photo"> Affinity
+                                Photo</label>
+                            <label class="item"><input type="checkbox" name="tool" value="Procreate"> Procreate</label>
+                            <label class="item"><input type="checkbox" name="tool" value="Clip Studio Paint"> Clip
+                                Studio Paint</label>
+                            <label class="item"><input type="checkbox" name="tool" value="Krita"> Krita</label>
+                            <label class="item"><input type="checkbox" name="tool" value="Blender"> Blender</label>
+                            <label class="item"><input type="checkbox" name="tool" value="Cinema 4D"> Cinema 4D</label>
+                            <label class="item"><input type="checkbox" name="tool" value="Autodesk 3ds Max"> Autodesk
+                                3ds Max</label>
+                            <label class="item"><input type="checkbox" name="tool" value="Autodesk Maya"> Autodesk
+                                Maya</label>
+                            <label class="item"><input type="checkbox" name="tool" value="DaVinci Resolve"> DaVinci
+                                Resolve</label>
+                            <label class="item"><input type="checkbox" name="tool" value="CapCut"> CapCut</label>
+                            <label class="item"><input type="checkbox" name="tool" value="Final Cut Pro"> Final Cut
+                                Pro</label>
+                            <label class="item"><input type="checkbox" name="tool" value="Audacity"> Audacity</label>
+                            <label class="item"><input type="checkbox" name="tool" value="FL Studio"> FL Studio</label>
+                            <label class="item"><input type="checkbox" name="tool" value="Logic Pro X"> Logic Pro
+                                X</label>
+                            <label class="item"><input type="checkbox" name="tool" value="GarageBand">
+                                GarageBand</label>
+                            <label class="item"><input type="checkbox" name="tool" value="Notion"> Notion</label>
+                            <label class="item"><input type="checkbox" name="tool" value="Trello"> Trello</label>
+                            <label class="item"><input type="checkbox" name="tool" value="Jira"> Jira</label>
+                            <label class="item"><input type="checkbox" name="tool" value="Slack"> Slack</label>
+                            <label class="item"><input type="checkbox" name="tool" value="GitHub"> GitHub</label>
+                            <label class="item"><input type="checkbox" name="tool" value="GitLab"> GitLab</label>
+                            <label class="item"><input type="checkbox" name="tool" value="Visual Studio Code (VS Code)">
+                                Visual Studio Code (VS Code)</label>
+                            <label class="item"><input type="checkbox" name="tool" value="Android Studio"> Android
+                                Studio</label>
+                            <label class="item"><input type="checkbox" name="tool" value="Xcode"> Xcode</label>
+                            <label class="item"><input type="checkbox" name="tool" value="IntelliJ IDEA"> IntelliJ
+                                IDEA</label>
+                            <label class="item"><input type="checkbox" name="tool" value="PyCharm"> PyCharm</label>
+                            <label class="item"><input type="checkbox" name="tool" value="WebStorm"> WebStorm</label>
+                            <label class="item"><input type="checkbox" name="tool" value="Postman"> Postman</label>
+                            <label class="item"><input type="checkbox" name="tool" value="Insomnia"> Insomnia</label>
+                            <label class="item"><input type="checkbox" name="tool" value="WordPress"> WordPress</label>
+                            <label class="item"><input type="checkbox" name="tool" value="Elementor"> Elementor</label>
+                            <label class="item"><input type="checkbox" name="tool" value="Webflow"> Webflow</label>
+                            <label class="item"><input type="checkbox" name="tool" value="Wix"> Wix</label>
+                            <label class="item"><input type="checkbox" name="tool" value="Jupyter Notebook"> Jupyter
+                                Notebook</label>
+                            <label class="item"><input type="checkbox" name="tool" value="Google Colab"> Google
+                                Colab</label>
+                            <label class="item"><input type="checkbox" name="tool" value="TensorFlow">
+                                TensorFlow</label>
+                            <label class="item"><input type="checkbox" name="tool" value="PyTorch"> PyTorch</label>
+                            <label class="item"><input type="checkbox" name="tool" value="Power BI"> Power BI</label>
+                            <label class="item"><input type="checkbox" name="tool" value="Tableau"> Tableau</label>
+                            <label class="item"><input type="checkbox" name="tool" value="Google Analytics"> Google
+                                Analytics</label>
+                            <label class="item"><input type="checkbox" name="tool" value="Google Search Console"> Google
+                                Search Console</label>
+                            <label class="item"><input type="checkbox" name="tool" value="Ahrefs"> Ahrefs</label>
+                            <label class="item"><input type="checkbox" name="tool" value="Mailchimp"> Mailchimp</label>
+                            <label class="item"><input type="checkbox" name="tool" value="HubSpot"> HubSpot</label>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="section">
+                    <button class="acc" aria-expanded="false">
+                        رنگ غالب
+                        <span class="chev">▾</span>
+                    </button>
+                    <div class="panelx">
+                        <div id="palette" class="palette"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="actions">
+                <button class="btn" onclick="resetFilters()">حذف فیلترها</button>
+                <button class="btn primary" onclick="applyFilters()">اعمال فیلتر</button>
+            </div>
+        </aside>
+    </div>
+    <div class="section">
+        <div class="container">
+            <!-- نوار دسته‌بندی‌ها -->
+            <div class="wrapper">
+                <div class="bar">
+                    <button class="nav-btn nav-left" id="leftBtn" aria-label="عقب" disabled>
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M15 18l-6-6 6-6" />
+                        </svg>
+                    </button>
+                    <div class="fade fade-left"></div>
+
+                    <div class="scroller" id="scroller">
+                        <!-- 3 دکمهٔ ابتدایی -->
+                        <button class="pill is-active" data-category="for-you"><span class="icon">⭐</span>برای
+                            شما</button>
+                        <button class="pill" data-category="followed"><span class="icon">♡</span>دنبال‌شده‌ها</button>
+                        <button class="pill" data-category="featured">برگزیده‌های اسنپ‌برند</button>
+                        <!-- 11 دسته‌بندی اصلی -->
+                        <button class="pill" data-category="graphic-design">طراحی گرافیک</button>
+                        <button class="pill" data-category="content-creation">تولید محتوا</button>
+                        <button class="pill" data-category="video-animation">ویدیو و انیمیشن</button>
+                        <button class="pill" data-category="copywriting">کپی‌رایتینگ</button>
+                        <button class="pill" data-category="web-development">توسعه وب‌سایت</button>
+                        <button class="pill" data-category="seo-marketing">سئو و بازاریابی دیجیتال</button>
+                        <button class="pill" data-category="social-media">مدیریت شبکه‌های اجتماعی</button>
+                        <button class="pill" data-category="programming-ai">برنامه‌نویسی و هوش مصنوعی</button>
+                        <button class="pill" data-category="photography">عکاسی</button>
+                        <button class="pill" data-category="audio-music">صدا و موسیقی</button>
+                        <button class="pill" data-category="illustration">تصویرسازی و هنر دیجیتال</button>
+                    </div>
+
+                    <div class="fade fade-right"></div>
+                    <button class="nav-btn nav-right" id="rightBtn" aria-label="جلو">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M9 18l6-6-6-6" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- نمایش زیرمجموعه‌های دسته‌بندی -->
+            <div id="subcategories" class="subcategories">
+                <!-- محتوای زیرمجموعه‌ها توسط JavaScript پر خواهد شد -->
+            </div>
+
+            <!-- نمایش پست‌ها -->
+            <div class="posts-container" id="postsContainer">
+                <!-- پست‌ها توسط JavaScript پر خواهند شد -->
+            </div>
+        </div>
+
+    </div>
+
+    
+
+    <footer class="sb">
+        <div class="wrap">
+            <!-- Top -->
+            <div class="top">
+                <div class="logo" aria-label="Snapbrand">
+                    <span class="logo-b"></span>
+                    <span>اسنپ‌برند</span>
+                </div>
+                <div class="soc">
+                    <!-- Instagram -->
+                    <a class="icon" href="#" title="Instagram" aria-label="Instagram">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M7 2C4.24 2 2 4.24 2 7v10c0 2.76 2.24 5 5 5h10c2.76 0 5-2.24 
+            5-5V7c0-2.76-2.24-5-5-5H7zm10 2c1.66 0 3 1.34 
+            3 3v10c0 1.66-1.34 3-3 3H7c-1.66 0-3-1.34-3-3V7c0-1.66 
+            1.34-3 3-3h10zm-5 3a5 5 0 100 10 5 5 0 000-10zm0 
+            2a3 3 0 110 6 3 3 0 010-6zm4.5-2a1.5 1.5 0 11-.001 3.001A1.5 
+            1.5 0 0116.5 7z" />
+                        </svg>
+                    </a>
+                    <!-- LinkedIn -->
+                    <a class="icon" href="#" title="LinkedIn" aria-label="LinkedIn">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M4.98 3.5A2.5 2.5 0 110 3.5a2.5 2.5 0 014.98 0zM.5 8.5h4.9V24H.5zM8 
+            8.5h4.7v2.2h.08c.65-1.2 2.24-2.5 4.6-2.5 4.9 0 5.8 3.3 5.8 7.7V24h-4.9v-7.7c0-1.9-.02-4.2-2.5-4.2s-2.9 
+            2-2.9 4.1V24H8z" />
+                        </svg>
+                    </a>
+                    <!-- Telegram -->
+                    <a class="icon" href="#" title="Telegram" aria-label="Telegram">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M9.04 15.46l-.37 5.23c.53 0 .76-.23 1.04-.5l2.5-2.4 
+            5.18 3.79c.95.52 1.63.25 1.89-.88l3.43-16.09h.01c.3-1.43-.52-1.99-1.45-1.64L1.38 
+            9.24c-1.37.53-1.35 1.3-.24 1.65l5.97 1.86L19.4 5.86c.59-.39 
+            1.13-.18.69.21" />
+                        </svg>
+                    </a>
+                    <!-- WhatsApp (اصلاح‌شده کامل با گوشی داخلی) -->
+                    <a class="icon" href="#" title="WhatsApp" aria-label="WhatsApp">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.16 
+            5.317 5.477 0 12.057 0c3.226-.001 6.251 1.254 8.52 
+            3.521a11.86 11.86 0 0 1 3.481 8.436c-.003 6.627-5.383 
+            12.001-12.01 12.001-2.042-.001-4.035-.521-5.788-1.507L.057 
+            24zm6.597-3.807c1.676.995 3.276 1.591 5.392 
+            1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 
+            0-9.887 4.434-9.889 9.885a9.842 9.842 0 0 0 1.599 
+            5.29l-.999 3.648 3.889-1.638z" />
+                            <path
+                                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.967-.94 
+            1.164-.173.198-.347.223-.644.075-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.173.198-.298.298-.497.099-.198.05-.372-.025-.521-.075-.149-.669-1.611-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.009-.372-.011-.571-.011-.198 
+            0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 
+            1.694.626.712.227 1.36.195 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Middle -->
+            <div class="cols">
+                <div class="col">
+                    <h4>فریلنسر</h4>
+                    <a href="./rahnamafreelancer.html">راهنمای شروع برای فریلنسر</a>
+                    <a href="./porofile-frieelancer.html">پروفایل کاربری فریلنسر</a>
+                    <a href="./plan.html">پلن‌های همکاری برای فریلنسر</a>
+                    <a href="./cofefreeelancer.html">کافه فریلنسر</a>
+                </div>
+                <div class="col">
+                    <h4>کارفرما</h4>
+                    <a href="./rahnamakarfarma.html">راهنمای شروع برای کارفرما</a>
+                    <a href="././panelekarfarma.html">پروفایل کاربری کارفرما</a>
+                    <a href="./plan.html">پلن‌های همکاری برای کارفرما</a>
+                </div>
+                <div class="col">
+                    <h4>دسترسی سریع</h4>
+                    <a href="./index.html">خانه</a>
+                    <a href="./shop.html">فروشگاه</a>
+                    <a href="./about_us.html">درباره ما</a>
+                    <a href="./contact-use.html">تماس با ما</a>
+                </div>
+                <div class="col enamad">
+                    <h4>نماد اعتماد</h4>
+                    <a href="#"><img src="./assets/img/Enemad.png" alt="اینماد"></a>
+                </div>
+            </div>
+
+            <!-- Bottom -->
+            <div class="bottom">کلیه حقوق این سایت متعلق به اسنپ‌برند می‌باشد</div>
+        </div>
+    </footer>
+
+    <script>
+        // داده‌های نمونه برای پست‌ها با ویژگی‌های کامل برای فیلتر کردن
+        const postsData = [
+            { 
+                id: 1, 
+                title: "طراحی لوگو برای شرکت فناوری", 
+                category: "graphic-design", 
+                subcategory: "logo-design", 
+                description: "طراحی لوگو مدرن و منحصر به فرد برای استارتاپ فناوری", 
+                price: 4500000, 
+                date: "2023-10-15", 
+                isPro: true,
+                tools: ["Adobe Illustrator", "Adobe Photoshop"],
+                availability: "پروژه‌ای / فریلنس",
+                country: "ایران",
+                city: "تهران",
+                dominantColor: "#FF5252"
+            },
+            { 
+                id: 2, 
+                title: "تدوین ویدیو تبلیغاتی", 
+                category: "video-animation", 
+                subcategory: "video-editing", 
+                description: "تدوین حرفه‌ای ویدیو تبلیغاتی 60 ثانیه‌ای", 
+                price: 3200000, 
+                date: "2023-10-12", 
+                isPro: false,
+                tools: ["Adobe Premiere Pro", "Adobe After Effects"],
+                availability: "تمام‌وقت",
+                country: "ایران",
+                city: "مشهد",
+                dominantColor: "#448AFF"
+            },
+            { 
+                id: 3, 
+                title: "تولید محتوای اینستاگرام", 
+                category: "content-creation", 
+                subcategory: "instagram-content", 
+                description: "تولید محتوای ماهانه برای پیج اینستاگرام", 
+                price: 2800000, 
+                date: "2023-10-10", 
+                isPro: true,
+                tools: ["Canva", "Adobe Photoshop"],
+                availability: "پروژه‌ای / فریلنس",
+                country: "ایران",
+                city: "اصفهان",
+                dominantColor: "#69F0AE"
+            },
+            { 
+                id: 4, 
+                title: "برنامه‌نویسی وب اپلیکیشن", 
+                category: "web-development", 
+                subcategory: "web-app", 
+                description: "توسعه وب اپلیکیشن با React و Node.js", 
+                price: 12500000, 
+                date: "2023-10-08", 
+                isPro: true,
+                tools: ["Visual Studio Code (VS Code)", "GitHub"],
+                availability: "تمام‌وقت",
+                country: "کانادا",
+                city: "تورنتو",
+                dominantColor: "#7C4DFF"
+            },
+            { 
+                id: 5, 
+                title: "طراحی کاراکتر برای بازی", 
+                category: "illustration", 
+                subcategory: "character-design", 
+                description: "طراحی و طراحی کاراکتر برای بازی موبایل", 
+                price: 7500000, 
+                date: "2023-10-05", 
+                isPro: false,
+                tools: ["Procreate", "Adobe Illustrator"],
+                availability: "پروژه‌ای / فریلنس",
+                country: "آلمان",
+                city: "برلین",
+                dominantColor: "#FF4081"
+            },
+            { 
+                id: 6, 
+                title: "مشاوره سئو وبسایت", 
+                category: "seo-marketing", 
+                subcategory: "seo-consulting", 
+                description: "بهینه‌سازی وبسایت برای موتورهای جستجو", 
+                price: 6000000, 
+                date: "2023-10-03", 
+                isPro: true,
+                tools: ["Google Analytics", "Ahrefs"],
+                availability: "پروژه‌ای / فریلنس",
+                country: "امارات",
+                city: "دبی",
+                dominantColor: "#FFD740"
+            },
+            { 
+                id: 7, 
+                title: "عکاسی محصولات", 
+                category: "photography", 
+                subcategory: "product-photography", 
+                description: "عکاسی حرفه‌ای از محصولات برای سایت", 
+                price: 3800000, 
+                date: "2023-10-01", 
+                isPro: false,
+                tools: ["Adobe Lightroom", "Adobe Photoshop"],
+                availability: "تمام‌وقت",
+                country: "ترکیه",
+                city: "استانبول",
+                dominantColor: "#18FFFF"
+            },
+            { 
+                id: 8, 
+                title: "نریشن ویدیو آموزشی", 
+                category: "audio-music", 
+                subcategory: "narration", 
+                description: "ضبط صدا و نریشن برای ویدیوهای آموزشی", 
+                price: 2200000, 
+                date: "2023-09-28", 
+                isPro: true,
+                tools: ["Adobe Audition", "Audacity"],
+                availability: "پروژه‌ای / فریلنس",
+                country: "ایران",
+                city: "شیراز",
+                dominantColor: "#FF6E40"
+            },
+            { 
+                id: 9, 
+                title: "کپی‌رایتینگ تبلیغاتی", 
+                category: "copywriting", 
+                subcategory: "ad-copy", 
+                description: "نوشتن متن تبلیغاتی خلاقانه برای کمپین", 
+                price: 3100000, 
+                date: "2023-09-25", 
+                isPro: false,
+                tools: ["Notion", "Google Docs"],
+                availability: "پروژه‌ای / فریلنس",
+                country: "ایران",
+                city: "تبریز",
+                dominantColor: "#64FFDA"
+            },
+            { 
+                id: 10, 
+                title: "مدیریت پیج اینستاگرام", 
+                category: "social-media", 
+                subcategory: "instagram-management", 
+                description: "مدیریت کامل پیج اینستاگرام به صورت ماهانه", 
+                price: 4800000, 
+                date: "2023-09-22", 
+                isPro: true,
+                tools: ["Canva", "Notion"],
+                availability: "تمام‌وقت",
+                country: "ایران",
+                city: "اهواز",
+                dominantColor: "#E040FB"
+            },
+            { 
+                id: 11, 
+                title: "طراحی موشن گرافی", 
+                category: "video-animation", 
+                subcategory: "motion-graphics", 
+                description: "ساخت موشن گرافی 30 ثانیه‌ای برای تبلیغات", 
+                price: 5500000, 
+                date: "2023-09-20", 
+                isPro: true,
+                tools: ["Adobe After Effects", "Adobe Premiere Pro"],
+                availability: "پروژه‌ای / فریلنس",
+                country: "ایران",
+                city: "رشت",
+                dominantColor: "#FFFF00"
+            },
+            { 
+                id: 12, 
+                title: "توسعه اپلیکیشن هوش مصنوعی", 
+                category: "programming-ai", 
+                subcategory: "ai-development", 
+                description: "پیاده‌سازی مدل هوش مصنوعی برای پردازش تصویر", 
+                price: 18500000, 
+                date: "2023-09-18", 
+                isPro: true,
+                tools: ["Python", "TensorFlow", "Jupyter Notebook"],
+                availability: "تمام‌وقت",
+                country: "آمریکا",
+                city: "سانفرانسیسکو",
+                dominantColor: "#9E9E9E"
+            },
+            { 
+                id: 13, 
+                title: "طراحی پست اینستاگرام", 
+                category: "graphic-design", 
+                subcategory: "post-story-design", 
+                description: "طراحی پست‌های جذاب برای اینستاگرام", 
+                price: 2500000, 
+                date: "2023-09-15", 
+                isPro: false,
+                tools: ["Adobe Photoshop", "Canva"],
+                availability: "پروژه‌ای / فریلنس",
+                country: "ایران",
+                city: "اصفهان",
+                dominantColor: "#FF9800"
+            },
+            { 
+                id: 14, 
+                title: "طراحی بنر تبلیغاتی", 
+                category: "graphic-design", 
+                subcategory: "banner-design", 
+                description: "طراحی بنرهای تبلیغاتی برای وب‌سایت", 
+                price: 1800000, 
+                date: "2023-09-12", 
+                isPro: true,
+                tools: ["Adobe Illustrator", "Adobe Photoshop"],
+                availability: "تمام‌وقت",
+                country: "ایران",
+                city: "شیراز",
+                dominantColor: "#4CAF50"
+            },
+            { 
+                id: 15, 
+                title: "تصویرسازی کتاب کودک", 
+                category: "illustration", 
+                subcategory: "children-book-illustration", 
+                description: "تصویرسازی خلاقانه برای کتاب‌های کودکان", 
+                price: 4200000, 
+                date: "2023-09-10", 
+                isPro: true,
+                tools: ["Procreate", "Adobe Illustrator"],
+                availability: "پروژه‌ای / فریلنس",
+                country: "ایران",
+                city: "تبریز",
+                dominantColor: "#E91E63"
+            },
+            { 
+                id: 16, 
+                title: "ساخت ریلز اینستاگرام", 
+                category: "video-animation", 
+                subcategory: "reels-clips", 
+                description: "ساخت ریلز جذاب برای اینستاگرام", 
+                price: 3500000, 
+                date: "2023-09-08", 
+                isPro: false,
+                tools: ["CapCut", "Adobe Premiere Pro"],
+                availability: "پروژه‌ای / فریلنس",
+                country: "ایران",
+                city: "مشهد",
+                dominantColor: "#9C27B0"
+            },
+            { 
+                id: 17, 
+                title: "تدوین و میکس صدا", 
+                category: "audio-music", 
+                subcategory: "audio-mixing", 
+                description: "تدوین و میکس حرفه‌ای صدا برای پروژه‌ها", 
+                price: 2800000, 
+                date: "2023-09-05", 
+                isPro: true,
+                tools: ["Adobe Audition", "FL Studio"],
+                availability: "تمام‌وقت",
+                country: "ایران",
+                city: "تهران",
+                dominantColor: "#607D8B"
+            },
+            { 
+                id: 18, 
+                title: "تولید محتوای وبلاگ", 
+                category: "content-creation", 
+                subcategory: "blog-content", 
+                description: "نوشتن محتوای با کیفیت برای وبلاگ", 
+                price: 1500000, 
+                date: "2023-09-03", 
+                isPro: false,
+                tools: ["Google Docs", "Notion"],
+                availability: "پروژه‌ای / فریلنس",
+                country: "ایران",
+                city: "اصفهان",
+                dominantColor: "#795548"
+            },
+            { 
+                id: 19, 
+                title: "مدیریت لینکدین", 
+                category: "social-media", 
+                subcategory: "social-management", 
+                description: "مدیریت حرفه‌ای صفحه لینکدین", 
+                price: 5500000, 
+                date: "2023-09-01", 
+                isPro: true,
+                tools: ["Canva", "LinkedIn"],
+                availability: "تمام‌وقت",
+                country: "ایران",
+                city: "تهران",
+                dominantColor: "#2196F3"
+            },
+            { 
+                id: 20, 
+                title: "طراحی سایت وردپرس", 
+                category: "web-development", 
+                subcategory: "wordpress-design", 
+                description: "طراحی سایت کامل با وردپرس", 
+                price: 8500000, 
+                date: "2023-08-28", 
+                isPro: true,
+                tools: ["WordPress", "Elementor"],
+                availability: "تمام‌وقت",
+                country: "ایران",
+                city: "شیراز",
+                dominantColor: "#3F51B5"
+            },
+            { 
+                id: 21, 
+                title: "برنامه‌نویسی وب", 
+                category: "programming-ai", 
+                subcategory: "web-programming", 
+                description: "توسعه وب‌سایت با React و Node.js", 
+                price: 12000000, 
+                date: "2023-08-25", 
+                isPro: true,
+                tools: ["Visual Studio Code", "GitHub"],
+                availability: "تمام‌وقت",
+                country: "ایران",
+                city: "تهران",
+                dominantColor: "#00BCD4"
+            },
+            { 
+                id: 22, 
+                title: "سئوی تکنیکال", 
+                category: "seo-marketing", 
+                subcategory: "technical-seo", 
+                description: "بهینه‌سازی تکنیکال سایت برای سئو", 
+                price: 4500000, 
+                date: "2023-08-22", 
+                isPro: true,
+                tools: ["Google Search Console", "Ahrefs"],
+                availability: "پروژه‌ای / فریلنس",
+                country: "ایران",
+                city: "اصفهان",
+                dominantColor: "#8BC34A"
+            }
+        ];
+
+        // وضعیت فیلترها
+        let activeFilters = {
+            categories: [],
+            availability: '',
+            country: '',
+            city: '',
+            tools: [],
+            colors: []
+        };
+
+        // متغیرهای global
+        let currentCategory = "for-you";
+        let currentSubcategory = "";
+
+        // رنگ‌های پالت
+        const colors = [
+            '#FF5252', '#FF4081', '#E040FB', '#7C4DFF', '#536DFE',
+            '#448AFF', '#40C4FF', '#18FFFF', '#64FFDA', '#69F0AE',
+            '#B2FF59', '#EEFF41', '#FFFF00', '#FFD740', '#FFAB40',
+            '#FF6E40', '#000000', '#616161', '#9E9E9E', '#FFFFFF'
+        ];
+
+        // زیرمجموعه‌های دسته‌بندی‌ها با نام نمایشی و slug
+        const subcategories = {
+            "graphic-design": [
+                { name: "طراحی لوگو و هویت بصری", slug: "logo-design" },
+                { name: "طراحی پست و استوری", slug: "post-story-design" },
+                { name: "طراحی بنر تبلیغاتی", slug: "banner-design" },
+                { name: "طراحی کاتالوگ، بروشور، کارت ویزیت", slug: "catalog-design" },
+                { name: "طراحی کاور (موزیک، پادکست، کتاب)", slug: "cover-design" },
+                { name: "طراحی بسته‌بندی (پک محصولات)", slug: "packaging-design" }
+            ],
+            "illustration": [
+                { name: "تصویرسازی کتاب کودک", slug: "children-book-illustration" },
+                { name: "تصویرسازی فانتزی / رئال", slug: "fantasy-illustration" },
+                { name: "کاراکتر دیزاین", slug: "character-design" },
+                { name: "طراحی NFT", slug: "nft-design" },
+                { name: "تصویرسازی تبلیغاتی", slug: "advertising-illustration" },
+                { name: "آرت کانسپت (برای بازی و انیمیشن)", slug: "concept-art" }
+            ],
+            "video-animation": [
+                { name: "تدوین و ادیت ویدیو", slug: "video-editing" },
+                { name: "ساخت ریلز و کلیپ تبلیغاتی", slug: "reels-clips" },
+                { name: "موشن‌گرافی", slug: "motion-graphics" },
+                { name: "انیمیشن دو بعدی / سه بعدی", slug: "animation-2d-3d" },
+                { name: "استاپ موشن", slug: "stop-motion" },
+                { name: "ویدیوهای آموزشی", slug: "educational-videos" }
+            ],
+            "audio-music": [
+                { name: "نریشن و دوبله", slug: "narration" },
+                { name: "تدوین و میکس صدا", slug: "audio-mixing" },
+                { name: "ساخت موسیقی اختصاصی", slug: "custom-music" },
+                { name: "افکت‌گذاری صوتی", slug: "audio-effects" },
+                { name: "ضبط پادکست", slug: "podcast-recording" }
+            ],
+            "content-creation": [
+                { name: "تولید محتوای وبلاگ", slug: "blog-content" },
+                { name: "تولید محتوا برای اینستاگرام", slug: "instagram-content" },
+                { name: "نوشتن اسکریپت ویدیو", slug: "video-script" },
+                { name: "کپشن‌نویسی و متن تبلیغاتی", slug: "ad-copy" },
+                { name: "نوشتن متن سایت و لندینگ", slug: "website-content" },
+                { name: "ترجمه و بازنویسی", slug: "translation-rewrite" },
+                { name: "ویراستاری متون فارسی", slug: "persian-editing" }
+            ],
+            "social-media": [
+                { name: "مدیریت پیج اینستاگرام", slug: "instagram-management" },
+                { name: "مدیریت لینکدین / توییتر / تلگرام", slug: "social-management" },
+                { name: "ساخت تقویم محتوایی", slug: "content-calendar" },
+                { name: "پاسخ به دیرکت و تعامل با فالوورها", slug: "engagement" },
+                { name: "اجرای کمپین و مسابقه", slug: "campaign-execution" },
+                { name: "رشد ارگانیک و تبلیغات اینفلوئنسری", slug: "organic-growth" }
+            ],
+            "web-development": [
+                { name: "طراحی سایت وردپرس", slug: "wordpress-design" },
+                { name: "طراحی سایت Webflow یا Wix", slug: "webflow-wix" },
+                { name: "طراحی UI/UX", slug: "ui-ux-design" },
+                { name: "طراحی فروشگاه اینترنتی", slug: "ecommerce-design" },
+                { name: "طراحی لندینگ‌پیج", slug: "landing-page" },
+                { name: "پشتیبانی سایت", slug: "website-support" }
+            ],
+            "programming-ai": [
+                { name: "برنامه‌نویسی وب (Front-end / Back-end)", slug: "web-programming" },
+                { name: "برنامه‌نویسی موبایل (iOS / Android)", slug: "mobile-programming" },
+                { name: "ساخت ربات / اتوماسیون", slug: "bot-automation" },
+                { name: "طراحی اپلیکیشن", slug: "app-design" },
+                { name: "API و یکپارچه‌سازی سیستم‌ها", slug: "api-integration" },
+                { name: "پروژه‌های دیتابیس", slug: "database-projects" }
+            ],
+            "seo-marketing": [
+                { name: "سئوی تکنیکال", slug: "technical-seo" },
+                { name: "سئوی محتوا", slug: "content-seo" },
+                { name: "تبلیغات گوگل (Google Ads)", slug: "google-ads" },
+                { name: "تبلیغات اینستاگرام", slug: "instagram-ads" },
+                { name: "ایمیل مارکتینگ", slug: "email-marketing" },
+                { name: "اتوماسیون بازاریابی", slug: "marketing-automation" },
+                { name: "آنالیز کمپین و CRO", slug: "campaign-analysis" }
+            ]
+        };
+
+        // مقداردهی اولیه
+        document.addEventListener('DOMContentLoaded', function () {
+            // ایجاد پالت رنگ
+            const palette = document.getElementById('palette');
+            colors.forEach(color => {
+                const colorOption = document.createElement('div');
+                colorOption.className = 'color-option';
+                colorOption.style.backgroundColor = color;
+                colorOption.setAttribute('data-color', color);
+                colorOption.addEventListener('click', function () {
+                    this.classList.toggle('selected');
+                    updateSelectedCount();
+                });
+                palette.appendChild(colorOption);
+            });
+
+            // افزودن رویداد به آکاردئون‌ها
+            document.querySelectorAll('.acc').forEach(button => {
+                button.addEventListener('click', function () {
+                    const expanded = this.getAttribute('aria-expanded') === 'true';
+                    this.setAttribute('aria-expanded', !expanded);
+                    const panel = this.nextElementSibling;
+                    panel.style.display = expanded ? 'none' : 'block';
+                });
+            });
+
+            // جستجو در دسته‌ها
+            document.getElementById('catSearch').addEventListener('input', function () {
+                filterList('catList', this.value);
+            });
+
+            // جستجو در ابزارها
+            document.getElementById('toolSearch').addEventListener('input', function () {
+                filterList('toolList', this.value);
+            });
+
+            // رویداد تغییر برای فیلترها
+            document.querySelectorAll('input[name="cat"], input[name="tool"]').forEach(input => {
+                input.addEventListener('change', updateSelectedCount);
+            });
+
+            document.querySelectorAll('input[name="availability"]').forEach(input => {
+                input.addEventListener('change', updateSelectedCount);
+            });
+
+            document.getElementById('country').addEventListener('change', updateSelectedCount);
+            document.getElementById('city').addEventListener('input', updateSelectedCount);
+
+            // نمایش پست‌ها
+            displayPosts(postsData);
+
+            // افزودن رویداد به دکمه‌های دسته‌بندی
+            document.querySelectorAll('.pill').forEach(pill => {
+                pill.addEventListener('click', function () {
+                    // حذف کلاس فعال از همه
+                    document.querySelectorAll('.pill').forEach(p => p.classList.remove('is-active'));
+                    // افزودن کلاس فعال به دکمه کلیک شده
+                    this.classList.add('is-active');
+
+                    // به‌روزرسانی دسته‌بندی فعلی
+                    currentCategory = this.getAttribute('data-category');
+
+                    // نمایش زیرمجموعه‌ها اگر دسته‌بندی اصلی انتخاب شده
+                    if (subcategories[currentCategory]) {
+                        showSubcategories(currentCategory);
+                    } else {
+                        hideSubcategories();
+                    }
+
+                    // فیلتر کردن پست‌ها
+                    filterPosts();
+                });
+            });
+
+            // رویدادهای ناوبری
+            const scroller = document.getElementById('scroller');
+            const leftBtn = document.getElementById('leftBtn');
+            const rightBtn = document.getElementById('rightBtn');
+
+            leftBtn.addEventListener('click', () => {
+                scroller.scrollBy({ left: -200, behavior: 'smooth' });
+            });
+
+            rightBtn.addEventListener('click', () => {
+                scroller.scrollBy({ left: 200, behavior: 'smooth' });
+            });
+
+            scroller.addEventListener('scroll', updateNavButtons);
+            
+            // اسلایدر
+            setupSlider();
+            
+            // toggle panels
+            setupToggle('tFreelancer', 'pFreelancer');
+            setupToggle('tEmployer', 'pEmployer');
+        });
+
+        // تابع برای فیلتر کردن پست‌ها با تمام فیلترها
+        function filterPostsWithAllFilters() {
+            let filteredPosts = postsData;
+
+            // فیلتر بر اساس دسته‌بندی اصلی
+            if (currentCategory && currentCategory !== "for-you" && currentCategory !== "followed" && currentCategory !== "featured") {
+                filteredPosts = filteredPosts.filter(post => post.category === currentCategory);
+            }
+
+            // فیلتر بر اساس زیردسته
+            if (currentSubcategory) {
+                filteredPosts = filteredPosts.filter(post => post.subcategory === currentSubcategory);
+            }
+
+            // فیلتر بر اساس دسته‌های انتخاب شده در پنل فیلتر
+            if (activeFilters.categories.length > 0) {
+                filteredPosts = filteredPosts.filter(post =>
+                    activeFilters.categories.includes(post.category)
+                );
+            }
+
+            // فیلتر بر اساس ابزارها
+            if (activeFilters.tools.length > 0) {
+                filteredPosts = filteredPosts.filter(post =>
+                    post.tools && post.tools.some(tool => activeFilters.tools.includes(tool))
+                );
+            }
+
+            // فیلتر بر اساس وضعیت همکاری
+            if (activeFilters.availability) {
+                filteredPosts = filteredPosts.filter(post =>
+                    post.availability === activeFilters.availability
+                );
+            }
+
+            // فیلتر بر اساس موقعیت مکانی
+            if (activeFilters.country) {
+                filteredPosts = filteredPosts.filter(post =>
+                    post.country === activeFilters.country
+                );
+            }
+
+            if (activeFilters.city) {
+                filteredPosts = filteredPosts.filter(post =>
+                    post.city && post.city.toLowerCase().includes(activeFilters.city.toLowerCase())
+                );
+            }
+
+            // فیلتر بر اساس رنگ
+            if (activeFilters.colors.length > 0) {
+                filteredPosts = filteredPosts.filter(post =>
+                    post.dominantColor && activeFilters.colors.includes(post.dominantColor)
+                );
+            }
+
+            // نمایش پست‌های فیلتر شده
+            displayPosts(filteredPosts);
+        }
+
+        // اعمال فیلترها
+        function applyFilters() {
+            // جمع‌آوری فیلترهای دسته‌ها
+            activeFilters.categories = [];
+            document.querySelectorAll('input[name="cat"]:checked').forEach(checkbox => {
+                activeFilters.categories.push(checkbox.value);
+            });
+
+            // جمع‌آوری فیلترهای ابزارها
+            activeFilters.tools = [];
+            document.querySelectorAll('input[name="tool"]:checked').forEach(checkbox => {
+                activeFilters.tools.push(checkbox.value);
+            });
+
+            // وضعیت همکاری
+            const availabilityInput = document.querySelector('input[name="availability"]:checked');
+            activeFilters.availability = availabilityInput ? availabilityInput.value : '';
+
+            // موقعیت مکانی
+            activeFilters.country = document.getElementById('country').value;
+            activeFilters.city = document.getElementById('city').value;
+
+            // رنگ‌ها
+            activeFilters.colors = [];
+            document.querySelectorAll('.color-option.selected').forEach(colorOption => {
+                activeFilters.colors.push(colorOption.getAttribute('data-color'));
+            });
+
+            console.log('فیلترهای اعمال شده:', activeFilters);
+
+            // فیلتر کردن پست‌ها بر اساس فیلترهای اعمال شده
+            filterPostsWithAllFilters();
+
+            closeFilters();
+        }
+
+        // باز کردن فیلترها
+        function openFilters() {
+            console.log("open")
+            document.getElementById('drawer').classList.add('open');
+            document.body.style.overflow = 'hidden';
+        }
+
+        // بستن فیلترها
+        function closeFilters() {
+            document.getElementById('drawer').classList.remove('open');
+            document.body.style.overflow = 'auto';
+        }
+
+        // فیلتر کردن لیست‌ها
+        function filterList(listId, searchTerm) {
+            const list = document.getElementById(listId);
+            const items = list.getElementsByClassName('item');
+
+            for (let item of items) {
+                const text = item.textContent || item.innerText;
+                if (text.toLowerCase().includes(searchTerm.toLowerCase())) {
+                    item.style.display = 'flex';
+                } else {
+                    item.style.display = 'none';
+                }
+            }
+        }
+
+        // به‌روزرسانی تعداد انتخاب‌ها
+        function updateSelectedCount() {
+            // شمارش دسته‌های انتخاب شده
+            const selectedCats = document.querySelectorAll('input[name="cat"]:checked').length;
+
+            // شمارش ابزارهای انتخاب شده
+            const selectedTools = document.querySelectorAll('input[name="tool"]:checked').length;
+
+            // بررسی وضعیت همکاری انتخاب شده
+            const availabilitySelected = document.querySelector('input[name="availability"]:checked').value !== '';
+
+            // بررسی موقعیت مکانی
+            const countrySelected = document.getElementById('country').value !== '';
+            const citySelected = document.getElementById('city').value !== '';
+
+            // شمارش رنگ‌های انتخاب شده
+            const selectedColors = document.querySelectorAll('.color-option.selected').length;
+
+            // محاسبه کل انتخاب‌ها
+            const totalSelected = selectedCats + selectedTools + selectedColors +
+                (availabilitySelected ? 1 : 0) +
+                (countrySelected ? 1 : 0) +
+                (citySelected ? 1 : 0);
+
+            // به‌روزرسانی شمارنده
+            document.getElementById('selCount').textContent = `${totalSelected} انتخاب`;
+            
+            // به‌روزرسانی note در آکاردئون‌ها
+            document.querySelectorAll('.acc .note').forEach(note => {
+                const section = note.closest('.section');
+                const acc = section.querySelector('.acc');
+                if (acc.textContent.includes('دسته‌بندی‌ها') && selectedCats > 0) {
+                    note.textContent = `${selectedCats} انتخاب`;
+                } else if (acc.textContent.includes('ابزارها و اپ‌ها') && selectedTools > 0) {
+                    note.textContent = `${selectedTools} انتخاب`;
+                } else {
+                    note.textContent = '';
+                }
+            });
+        }
+
+        // بازنشانی فیلترها
+        function resetFilters() {
+            // بازنشانی چک‌باکس‌های دسته‌ها
+            document.querySelectorAll('input[name="cat"]').forEach(checkbox => {
+                checkbox.checked = false;
+            });
+
+            // بازنشانی چک‌باکس‌های ابزارها
+            document.querySelectorAll('input[name="tool"]').forEach(checkbox => {
+                checkbox.checked = false;
+            });
+
+            // بازنشانی وضعیت همکاری
+            document.querySelector('input[name="availability"][value=""]').checked = true;
+
+            // بازنشانی موقعیت مکانی
+            document.getElementById('country').value = '';
+            document.getElementById('city').value = '';
+
+            // بازنشانی رنگ‌ها
+            document.querySelectorAll('.color-option.selected').forEach(colorOption => {
+                colorOption.classList.remove('selected');
+            });
+
+            // بازنشانی جستجوها
+            document.getElementById('catSearch').value = '';
+            document.getElementById('toolSearch').value = '';
+            filterList('catList', '');
+            filterList('toolList', '');
+
+            // به‌روزرسانی شمارنده
+            updateSelectedCount();
+
+            // بازنشانی فیلترهای فعال
+            activeFilters = {
+                categories: [],
+                availability: '',
+                country: '',
+                city: '',
+                tools: [],
+                colors: []
+            };
+
+            console.log('فیلترها بازنشانی شدند');
+
+            // نمایش همه پست‌ها
+            displayPosts(postsData);
+        }
+
+        // نمایش پست‌ها
+        function displayPosts(posts) {
+            const postsContainer = document.getElementById('postsContainer');
+            postsContainer.innerHTML = '';
+
+            if (posts.length === 0) {
+                postsContainer.innerHTML = '<div class="no-posts">پستی یافت نشد</div>';
+                return;
+            }
+
+            posts.forEach(post => {
+                const postElement = document.createElement('div');
+                postElement.className = 'post';
+
+                postElement.innerHTML = `
+                    <div class="post-image" style="background-color: ${post.dominantColor || '#eee'}">${post.title}</div>
+                    <div class="post-content">
+                        <div class="post-category">${post.category}</div>
+                        <h3 class="post-title">${post.title}</h3>
+                        <p class="post-description">${post.description}</p>
+                        <div class="post-meta">
+                            <span>${formatPrice(post.price)} تومان</span>
+                            <span>${formatDate(post.date)}</span>
+                        </div>
+                        <div class="post-tools">
+                            ${post.tools ? post.tools.map(tool => `<span class="tool-tag">${tool}</span>`).join('') : ''}
+                        </div>
+                    </div>
+                `;
+
+                postsContainer.appendChild(postElement);
+            });
+        }
+
+        // نمایش زیرمجموعه‌های دسته‌بندی
+        function showSubcategories(category) {
+            const subcategoriesContainer = document.getElementById('subcategories');
+            const subList = subcategories[category];
+
+            let html = `
+                <div class="subcategory-title">زیردسته‌های ${document.querySelector(`.pill[data-category="${category}"]`).textContent}</div>
+                <div class="subcategory-list">
+            `;
+            subList.forEach(sub => {
+                html += `<div class="subcategory-item" data-subcategory="${sub.slug}">${sub.name}</div>`;
+            });
+
+            html += '</div>';
+            subcategoriesContainer.innerHTML = html;
+            subcategoriesContainer.classList.add('active');
+
+            // افزودن رویداد به آیتم‌های زیردسته
+            document.querySelectorAll('.subcategory-item').forEach(item => {
+                item.addEventListener('click', function () {
+                    document.querySelectorAll('.subcategory-item').forEach(i => i.classList.remove('active'));
+                    this.classList.add('active');
+
+                    currentSubcategory = this.getAttribute('data-subcategory');
+                    filterPosts();
+                });
+            });
+        }
+
+        // مخفی کردن زیرمجموعه‌ها
+        function hideSubcategories() {
+            const subcategoriesContainer = document.getElementById('subcategories');
+            subcategoriesContainer.classList.remove('active');
+            currentSubcategory = "";
+        }
+
+        // فیلتر کردن پست‌ها
+        function filterPosts() {
+            // استفاده از فیلترهای فعال از سیستم کشویی
+            filterPostsWithAllFilters();
+        }
+
+        // به‌روزرسانی وضعیت دکمه‌های ناوبری
+        function updateNavButtons() {
+            const scroller = document.getElementById('scroller');
+            const leftBtn = document.getElementById('leftBtn');
+            const rightBtn = document.getElementById('rightBtn');
+
+            leftBtn.disabled = scroller.scrollLeft === 0;
+            rightBtn.disabled = scroller.scrollLeft + scroller.clientWidth >= scroller.scrollWidth;
+        }
+
+        // فرمت قیمت
+        function formatPrice(price) {
+            return price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+        }
+
+        // فرمت تاریخ
+        function formatDate(dateString) {
+            const options = { year: 'numeric', month: 'long', day: 'numeric' };
+            return new Date(dateString).toLocaleDateString('fa-IR', options);
+        }
+
+        function setupToggle(tId, pId) {
+            const t = document.getElementById(tId), p = document.getElementById(pId);
+            t.addEventListener('click', () => {
+                const open = p.classList.contains('open');
+                document.querySelectorAll('.panel').forEach(x => x.classList.remove('open'));
+                document.querySelectorAll('.toggle').forEach(x => x.setAttribute('aria-expanded', 'false'));
+                if (!open) { p.classList.add('open'); t.setAttribute('aria-expanded', 'true'); }
+            });
+        }
+
+        function setupSlider() {
+            const slider = document.querySelector('.slider');
+            const slides = document.querySelectorAll('.slide');
+            const controls = document.querySelectorAll('.slider-control');
+            const arrowLeft = document.querySelector('.arrow-left');
+            const arrowRight = document.querySelector('.arrow-right');
+
+            let currentSlide = 0;
+            const slideCount = slides.length;
+
+            // تابع برای تغییر اسلاید
+            function goToSlide(index) {
+                if (index < 0) {
+                    index = slideCount - 1;
+                } else if (index >= slideCount) {
+                    index = 0;
+                }
+
+                slider.style.transform = `translateX(-${index * 100}%)`;
+
+                // به روز رسانی کنترل‌های فعال
+                controls.forEach((control, i) => {
+                    if (i === index) {
+                        control.classList.add('active');
+                    } else {
+                        control.classList.remove('active');
+                    }
+                });
+
+                currentSlide = index;
+            }
+
+            // اضافه کردن رویداد برای کنترل‌ها
+            controls.forEach((control, index) => {
+                control.addEventListener('click', () => {
+                    goToSlide(index);
+                });
+            });
+
+            // اضافه کردن رویداد برای فلش‌ها
+            arrowLeft.addEventListener('click', () => {
+                goToSlide(currentSlide + 1);
+            });
+
+            arrowRight.addEventListener('click', () => {
+                goToSlide(currentSlide - 1);
+            });
+
+            // اسلاید خودکار
+            let autoSlide = setInterval(() => {
+                goToSlide(currentSlide + 1);
+            }, 5000);
+
+            // توقف اسلاید خودکار هنگام هاور روی اسلایدر
+            const sliderContainer = document.querySelector('.slider-container');
+            sliderContainer.addEventListener('mouseenter', () => {
+                clearInterval(autoSlide);
+            });
+
+            sliderContainer.addEventListener('mouseleave', () => {
+                autoSlide = setInterval(() => {
+                    goToSlide(currentSlide + 1);
+                }, 5000);
+            });
+
+            // پشتیبانی از سوایپ در تاچ اسکرین
+            let touchStartX = 0;
+            let touchEndX = 0;
+
+            sliderContainer.addEventListener('touchstart', e => {
+                touchStartX = e.changedTouches[0].screenX;
+            });
+
+            sliderContainer.addEventListener('touchend', e => {
+                touchEndX = e.changedTouches[0].screenX;
+                handleSwipe();
+            });
+
+            function handleSwipe() {
+                if (touchEndX < touchStartX) {
+                    goToSlide(currentSlide + 1); // سوایپ به چپ - اسلاید بعدی
+                }
+                if (touchEndX > touchStartX) {
+                    goToSlide(currentSlide - 1); // سوایپ به راست - اسلاید قبلی
+                }
+            }
+        }
+
+        // جلوگیری از بسته شدن پنل‌ها هنگام کلیک داخل آنها
+        document.addEventListener('click', e => {
+            if (!e.target.closest('.panel') && !e.target.closest('.toggle')) {
+                document.querySelectorAll('.panel').forEach(x => x.classList.remove('open'));
+                document.querySelectorAll('.toggle').forEach(x => x.setAttribute('aria-expanded', 'false'));
+            }
+        });
+
+        document.addEventListener('keydown', e => {
+            if (e.key === "Escape") {
+                document.querySelectorAll('.panel').forEach(x => x.classList.remove('open'));
+                document.querySelectorAll('.toggle').forEach(x => x.setAttribute('aria-expanded', 'false'));
+            }
+        });
+        
+    </script>
+
 </body>
+
 </html>
