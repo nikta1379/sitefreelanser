@@ -63,6 +63,7 @@ body{margin:0;background:var(--bg);color:var(--text);font:14px/1.85 "IRANSans","
 .space{flex:1}
 
 .nav{display:flex;gap:8px}
+.navlinks{color: white;}
 .nav a{padding:10px 12px;border-radius:10px;color:var(--text);text-decoration:none;border:1px solid transparent}
 .nav a[aria-current="page"]{background:#f8fafc;border-color:var(--border)}
 .btn{display:inline-flex;align-items:center;gap:8px;padding:10px 14px;border-radius:12px;border:1px solid var(--brand);background:var(--brand);color:#fff;text-decoration:none;cursor:pointer}
