@@ -1,727 +1,656 @@
-<!DOCTYPE html>
-<html lang="fa" dir="rtl">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>فریلنسرها - پنل کارفرما</title>
-    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-<link rel="stylesheet" href="./assets/css/modiriat-freelancer.css">
-</head>
-<body>
-    <!-- Header (Same as employer-panel.html) -->
-    <header>
-        <div class="navbar">
-            <div class="cluster">
-                <div class="toggle" id="tFreelancer" aria-expanded="false" aria-controls="pFreelancer">
-                    <span class="icon" aria-hidden="true">
-                        <svg fill="none" viewBox="0 0 24 24" stroke-width="2">
-                            <rect x="3" y="4" width="18" height="12" rx="2"></rect>
-                            <path d="M8 20h8M12 16v4"></path>
-                        </svg>
-                    </span>
-                    <span class="label">فریلنسر هستم</span>
-                    <span class="plus">+</span>
-                </div>
-                <div class="toggle" id="tEmployer" aria-expanded="false" aria-controls="pEmployer">
-                    <span class="icon" aria-hidden="true">
-                        <svg fill="none" viewBox="0 0 24 24" stroke-width="2">
-                            <path d="M9 6V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v1"></path>
-                            <rect x="3" y="7" width="18" height="12" rx="2"></rect>
-                            <path d="M3 12h18"></path>
-                        </svg>
-                    </span>
-                    <span class="label">کارفرما هستم</span>
-                    <span class="plus">+</span>
-                </div>
-                <nav class="panel" id="pFreelancer">
-                    <h4>فریلنسر — شروع سریع</h4>
-                    
-                    <a href="./rahnamafreelancer.html">راهنمای شروع برای فریلنسر</a>
-                    <a href="./porofile-frieelancer.html">ایجاد پروفایل فریلنسر</a>
-                    <a href="./plan.html">پلن‌های همکاری</a>
-                </nav>
-                <nav class="panel" id="pEmployer" data-side="employer">
-                    <h4>کارفرما — شروع سریع</h4>
-                    <a href="./rahnamakarfarma.html">راهنمای شروع برای کارفرما</a>
-                    <a href="./modiriat-freelancers.html">مشاهده فریلنسرها</a>
-                    <a href="./plan.html">پلن‌های همکاری</a>
-                </nav>
-            </div>
 
-            <a class="logo" href="./index.html"><img src="./assets/img/logo png 2_103307.png" alt=""></a>
-
-            <div class="navlinks">
-                <a class="link" href="./index.html">خانه</a>
-                <a class="link" href="./shop.html">فروشگاه</a>
-                <span class="divider"></span>
-                <a class="btn" href="./Registration.html">ثبت‌نام</a>
-                <a class="btn" href="./login.html">ورود</a>
-                    </span>
-                    
-                </a>
-            </div>
-        </div>
-    </header>
-
-    <!-- Main Layout -->
-    <div class="main-layout">
-        <!-- Sidebar (Same as employer-panel.html) -->
-        
-
-        <!-- Content Area -->
-        <main class="content">
-            <!-- Page Header -->
-            <div class="page-header">
-                <h1 class="page-title">فریلنسرها</h1>
-                <button class="btn-primary" onclick="openModal('hireFreelancerModal')">
-                    <i class="fas fa-user-plus"></i>
-                    استخدام مستقیم
-                </button>
-            </div>
-
-            <!-- Search and Filter -->
-            <div class="freelancers-header">
-                <div class="search-filter">
-                    <div class="search-box">
-                        <input type="text" placeholder="جستجو در فریلنسرها...">
-                        <i class="fas fa-search"></i>
-                    </div>
-                    <div class="filter-dropdown">
-                        <button class="filter-btn">
-                            <i class="fas fa-filter"></i>
-                            فیلتر پیشرفته
-                        </button>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Categories Filter -->
-            <div class="categories-filter">
-                <div class="category-chip active">همه</div>
-                <div class="category-chip">وبسایت</div>
-                <div class="category-chip">اپلیکیشن</div>
-                <div class="category-chip">گرافیک</div>
-                <div class="category-chip">محتوا</div>
-                <div class="category-chip">دیجیتال مارکتینگ</div>
-            </div>
-
-            <!-- Freelancers Grid -->
-            <div class="freelancers-grid" id="freelancersGrid">
-                <!-- Dynamic freelancer cards will be loaded here -->
-                </div>
-
-            </div>
-        </main>
-    </div>
-
-    <!-- Hire Freelancer Modal -->
-    <div id="hireFreelancerModal" class="modal">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h3 class="modal-title">استخدام مستقیم فریلنسر</h3>
-                <button class="modal-close" onclick="closeModal('hireFreelancerModal')">
-                    <i class="fas fa-times"></i>
-                </button>
-            </div>
-            <form>
-                <div class="form-group">
-                    <label class="form-label">انتخاب فریلنسر</label>
-                    <select class="form-control">
-                        <option>فریلنسر را انتخاب کنید</option>
-                        <option>علی رضایی</option>
-                        <option>سارا اکبری</option>
-                        <option>مریم احمدی</option>
-                        <option>رضا قاسمی</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label class="form-label">عنوان پروژه</label>
-                    <input type="text" class="form-control" placeholder="عنوان پروژه را وارد کنید...">
-                </div>
-                <div class="form-group">
-                    <label class="form-label">توضیحات پروژه</label>
-                    <textarea class="form-control" placeholder="توضیحات کامل پروژه را وارد کنید..."></textarea>
-                </div>
-                <div class="form-group">
-                    <label class="form-label">بودجه پروژه (تومان)</label>
-                    <input type="text" class="form-control" placeholder="مثال: 5,000,000">
-                </div>
-                <div class="form-group">
-                    <label class="form-label">مهلت پروژه</label>
-                    <input type="date" class="form-control">
-                </div>
-                <div class="form-actions">
-                    <button type="button" class="btn-cancel" onclick="closeModal('hireFreelancerModal')">انصراف</button>
-                    <button type="submit" class="btn-primary">ارسال پیشنهاد</button>
-                </div>
-            </form>
-        </div>
-    </div>
-
-    <!-- Freelancer Profile Modal -->
-    <div id="freelancerProfileModal" class="modal">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h3 class="modal-title">پروفایل فریلنسر</h3>
-                <button class="modal-close" onclick="closeModal('freelancerProfileModal')">
-                    <i class="fas fa-times"></i>
-                </button>
-            </div>
-            
-            <div class="profile-header">
-                <img src="https://via.placeholder.com/120" alt="فریلنسر" class="profile-avatar-large">
-                <h3 class="profile-name">علی رضایی</h3>
-                <p class="profile-title">توسعه‌دهنده فرانت‌اند</p>
-                <div class="profile-rating">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star-half-alt"></i>
-                    4.8 (24 نظر)
-                </div>
-            </div>
-            
-            <div class="profile-section">
-                <h4 class="section-title">درباره من</h4>
-                <p>توسعه‌دهنده فرانت‌اند با 5 سال سابقه کار در زمینه React و Vue.js. علاقه‌مند به ساخت رابط‌های کاربری مدرن و بهینه. تجربه کار در پروژه‌های بزرگ و همکاری با تیم‌های بین‌المللی.</p>
-            </div>
-            
-            <div class="profile-section">
-                <h4 class="section-title">مهارت‌ها</h4>
-                <div class="freelancer-skills">
-                    <span class="skill-tag">React</span>
-                    <span class="skill-tag">Vue.js</span>
-                    <span class="skill-tag">JavaScript</span>
-                    <span class="skill-tag">CSS3</span>
-                    <span class="skill-tag">HTML5</span>
-                    <span class="skill-tag">Git</span>
-                    <span class="skill-tag">Webpack</span>
-                </div>
-            </div>
-            
-            <div class="profile-section">
-                <h4 class="section-title">نمونه کارها</h4>
-                <div class="portfolio-grid">
-                    <div class="portfolio-item">
-                        <img src="https://via.placeholder.com/300x150" alt="نمونه کار">
-                    </div>
-                    <div class="portfolio-item">
-                        <img src="https://via.placeholder.com/300x150" alt="نمونه کار">
-                    </div>
-                    <div class="portfolio-item">
-                        <img src="https://via.placeholder.com/300x150" alt="نمونه کار">
-                    </div>
-                    <div class="portfolio-item">
-                        <img src="https://via.placeholder.com/300x150" alt="نمونه کار">
-                    </div>
-                </div>
-            </div>
-            
-            <div class="profile-section">
-                <h4 class="section-title">نظرات کارفرمایان</h4>
-                <div class="reviews-list">
-                    <div class="review-item">
-                        <div class="review-header">
-                            <div class="reviewer-info">
-                                <img src="https://via.placeholder.com/30" alt="کارفرما" class="reviewer-avatar">
-                                <div>
-                                    <div>احمد محمدی</div>
-                                    <div class="review-rating">
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="review-date">2 هفته پیش</div>
-                        </div>
-                        <p class="review-text">علی بهترین توسعه‌دهنده‌ای است که تا به حال باهاش کار کردم. پروژه رو دقیقا طبق زمانبندی تحویل داد و کیفیت کار عالی بود.</p>
-                    </div>
-                    
-                    <div class="review-item">
-                        <div class="review-header">
-                            <div class="reviewer-info">
-                                <img src="https://via.placeholder.com/30" alt="کارفرما" class="reviewer-avatar">
-                                <div>
-                                    <div>سارا رضایی</div>
-                                    <div class="review-rating">
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star-half-alt"></i>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="review-date">1 ماه پیش</div>
-                        </div>
-                        <p class="review-text">حرفه‌ای و مسئولیت‌پذیر. همیشه در دسترس بود و به تمام سوالاتم پاسخ می‌داد. حتماً دوباره باهاش کار خواهم کرد.</p>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="form-actions">
-                <button type="button" class="btn-cancel" onclick="closeModal('freelancerProfileModal')">بستن</button>
-                <button type="button" class="btn-primary">ارسال پیشنهاد</button>
-            </div>
-        </div>
-    </div>
-    <footer class="sb">
-  <div class="wrap">
-    <!-- Top -->
-    <div class="top">
-      <img src="./assets/img/logo png 2_103307.png" alt="">
-      <div class="soc">
-        <!-- Instagram -->
-        <a class="icon" href="#" title="Instagram" aria-label="Instagram">
-          <svg viewBox="0 0 24 24">
-            <path d="M7 2C4.24 2 2 4.24 2 7v10c0 2.76 2.24 5 5 5h10c2.76 0 5-2.24 
-            5-5V7c0-2.76-2.24-5-5-5H7zm10 2c1.66 0 3 1.34 
-            3 3v10c0 1.66-1.34 3-3 3H7c-1.66 0-3-1.34-3-3V7c0-1.66 
-            1.34-3 3-3h10zm-5 3a5 5 0 100 10 5 5 0 000-10zm0 
-            2a3 3 0 110 6 3 3 0 010-6zm4.5-2a1.5 1.5 0 11-.001 3.001A1.5 
-            1.5 0 0116.5 7z"/>
-          </svg>
-        </a>
-        <!-- LinkedIn -->
-        <a class="icon" href="#" title="LinkedIn" aria-label="LinkedIn">
-          <svg viewBox="0 0 24 24"><path d="M4.98 3.5A2.5 2.5 0 110 3.5a2.5 2.5 0 014.98 0zM.5 8.5h4.9V24H.5zM8 
-            8.5h4.7v2.2h.08c.65-1.2 2.24-2.5 4.6-2.5 4.9 0 5.8 3.3 5.8 7.7V24h-4.9v-7.7c0-1.9-.02-4.2-2.5-4.2s-2.9 
-            2-2.9 4.1V24H8z"/></svg>
-        </a>
-        <!-- Telegram -->
-        <a class="icon" href="#" title="Telegram" aria-label="Telegram">
-          <svg viewBox="0 0 24 24"><path d="M9.04 15.46l-.37 5.23c.53 0 .76-.23 1.04-.5l2.5-2.4 
-            5.18 3.79c.95.52 1.63.25 1.89-.88l3.43-16.09h.01c.3-1.43-.52-1.99-1.45-1.64L1.38 
-            9.24c-1.37.53-1.35 1.3-.24 1.65l5.97 1.86L19.4 5.86c.59-.39 
-            1.13-.18.69.21"/></svg>
-        </a>
-        <!-- WhatsApp (اصلاح‌شده کامل با گوشی داخلی) -->
-        <a class="icon" href="#" title="WhatsApp" aria-label="WhatsApp">
-          <svg viewBox="0 0 24 24">
-            <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.16 
-            5.317 5.477 0 12.057 0c3.226-.001 6.251 1.254 8.52 
-            3.521a11.86 11.86 0 0 1 3.481 8.436c-.003 6.627-5.383 
-            12.001-12.01 12.001-2.042-.001-4.035-.521-5.788-1.507L.057 
-            24zm6.597-3.807c1.676.995 3.276 1.591 5.392 
-            1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 
-            0-9.887 4.434-9.889 9.885a9.842 9.842 0 0 0 1.599 
-            5.29l-.999 3.648 3.889-1.638z"/>
-            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.967-.94 
-            1.164-.173.198-.347.223-.644.075-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.173.198-.298.298-.497.099-.198.05-.372-.025-.521-.075-.149-.669-1.611-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.009-.372-.011-.571-.011-.198 
-            0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 
-            1.694.626.712.227 1.36.195 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
-          </svg>
-        </a>
-      </div>
-    </div>
-
-    <!-- Middle -->
-    <div class="cols">
-      <div class="col">
-        <h4>فریلنسر</h4>
-        <a href="#">راهنمای شروع برای فریلنسر</a>
-        <a href="#">پروفایل کاربری فریلنسر</a>
-        <a href="#">پلن‌های همکاری برای فریلنسر</a>
-        <a href="#">کافه فریلنسر</a>
-      </div>
-      <div class="col">
-        <h4>کارفرما</h4>
-        <a href="#">راهنمای شروع برای کارفرما</a>
-        <a href="#">پروفایل کاربری کارفرما</a>
-        <a href="#">پلن‌های همکاری برای کارفرما</a>
-      </div>
-      <div class="col">
-        <h4>دسترسی سریع</h4>
-        <a href="#">خانه</a>
-        <a href="#">فروشگاه</a>
-        <a href="#">درباره ما</a>
-        <a href="#">تماس با ما</a>
-      </div>
-      <div class="col enamad">
-        
-        <a href="#"><img src="./assets/img/Enemad.png" alt=""></a>
-      </div>
-    </div>
-
-    <!-- Bottom -->
-    <div class="bottom">کلیه حقوق این سایت متعلق به اسنپ‌برند می‌باشد</div>
-  </div>
-</footer>
-
-    <script>
-        // === Snapbrand: Dynamic Freelancer Profiles Display ===
-        (function(){
-            const PROFILE_STORAGE_KEY = 'freelancerProfiles';
-
-            // Load published profiles from localStorage
-            function loadPublishedProfiles() {
-                try {
-                  const profiles = JSON.parse(localStorage.getItem(PROFILE_STORAGE_KEY) || '[]');
-                  return profiles.filter(profile => profile.isPublished === true);
-                } catch (e) {
-                  console.error('Error loading profiles:', e);
-                  return [];
-                }
-              }
-
-            // Generate freelancer card HTML
-            function generateFreelancerCard(profile) {
-                const avatarSrc = profile.avatar || 'https://via.placeholder.com/80';
-                const coverStyle = profile.cover ? 
-                    `background-image: url('${profile.cover}'); background-size: cover; background-position: center;` : 
-                    'background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);';
-                
-                const skills = profile.skills ? profile.skills.slice(0, 4) : [];
-                const works = profile.works ? profile.works.length : 0;
-                const products = profile.products ? profile.products.length : 0;
-                
-                return `
-      <div class="freelancer-card" data-profile-id="${profile.id}">
-        <div class="freelancer-header" style="${coverStyle}">
-          <img src="${avatarSrc}" alt="${profile.name}" class="freelancer-avatar">
-        </div>
-        <div class="freelancer-body">
-          <h3 class="freelancer-name">${profile.name || 'نام فریلنسر'}</h3>
-          <p class="freelancer-title">${profile.title || 'عنوان شغلی'}</p>
-          <div class="freelancer-rating">
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star-half-alt"></i>
-            4.8 (12 نظر)
-          </div>
-          <p class="freelancer-description">${profile.about || 'توضیحات فریلنسر در اینجا نمایش داده می‌شود.'}</p>
-          <div class="freelancer-skills">
-            ${skills.map(skill => `<span class="skill-tag">${skill}</span>`).join('')}
-            ${skills.length === 0 ? '<span class="skill-tag">مهارت‌ها</span>' : ''}
-          </div>
-          <div class="freelancer-stats">
-            <div class="stat-item">
-              <div class="stat-value">${works}</div>
-              <div class="stat-label">نمونه‌کار</div>
-            </div>
-            <div class="stat-item">
-              <div class="stat-value">${products}</div>
-              <div class="stat-label">محصول</div>
-            </div>
-            <div class="stat-item">
-              <div class="stat-value">${profile.status ? profile.status.length : 0}</div>
-              <div class="stat-label">وضعیت</div>
-            </div>
-          </div>
-          <div class="freelancer-actions">
-            <button class="btn-secondary" onclick="viewFreelancerProfile('${profile.id}')">پروفایل</button>
-            <button class="btn-primary" onclick="contactFreelancer('${profile.id}')">ارسال پیشنهاد</button>
-          </div>
-        </div>
-      </div>
-    `;
-  }
-
-
-            // Render freelancer profiles
-            function renderFreelancerProfiles() {
-                const profiles = loadPublishedProfiles();
-                const grid = document.getElementById('freelancersGrid');
-                
-                if (profiles.length === 0) {
-                    grid.innerHTML = `
-                        <div style="text-align: center; padding: 40px; color: #666;">
-                            <i class="fas fa-users" style="font-size: 48px; margin-bottom: 16px; opacity: 0.5;"></i>
-                            <h3>هنوز پروفایلی منتشر نشده است</h3>
-                            <p>فریلنسرها می‌توانند پروفایل خود را در صفحه پروفایل منتشر کنند.</p>
-                        </div>
-                    `;
-                } else {
-                    grid.innerHTML = profiles.map(profile => generateFreelancerCard(profile)).join('');
-                }
-            }
-
-            // View freelancer profile in modal
-            function viewFreelancerProfile(profileId) {
-                const profiles = loadPublishedProfiles();
-                const profile = profiles.find(p => p.id === profileId);
-                
-                if (profile) {
-                    // Update modal content with profile data
-                    const modal = document.getElementById('freelancerProfileModal');
-                    const avatar = modal.querySelector('.profile-avatar-large');
-                    const name = modal.querySelector('.profile-name');
-                    const title = modal.querySelector('.profile-title');
-                    const about = modal.querySelector('.profile-section p');
-                    const skills = modal.querySelector('.freelancer-skills');
-                    
-                    avatar.src = profile.avatar || 'https://via.placeholder.com/120';
-                    name.textContent = profile.name || 'نام فریلنسر';
-                    title.textContent = profile.title || 'عنوان شغلی';
-                    about.textContent = profile.about || 'توضیحات فریلنسر در اینجا نمایش داده می‌شود.';
-                    
-                    if (profile.skills && profile.skills.length > 0) {
-                        skills.innerHTML = profile.skills.map(skill => `<span class="skill-tag">${skill}</span>`).join('');
-                    } else {
-                        skills.innerHTML = '<span class="skill-tag">مهارت‌ها</span>';
-                    }
-                    
-                    openModal('freelancerProfileModal');
-                }
-            }
-
-            // Contact freelancer
-            function contactFreelancer(profileId) {
-                const profiles = loadPublishedProfiles();
-                const profile = profiles.find(p => p.id === profileId);
-                
-                if (profile && profile.contactInfo) {
-                    const contactInfo = profile.contactInfo;
-                    let contactText = `اطلاعات تماس ${profile.name}:\n\n`;
-                    
-                    if (contactInfo.phone) contactText += `📱 تلفن: ${contactInfo.phone}\n`;
-                    if (contactInfo.telegram) contactText += `📱 تلگرام: ${contactInfo.telegram}\n`;
-                    if (contactInfo.whatsapp) contactText += `📱 واتس‌اپ: ${contactInfo.whatsapp}\n`;
-                    if (contactInfo.instagram) contactText += `📷 اینستاگرام: ${contactInfo.instagram}\n`;
-                    if (contactInfo.website) contactText += `🌐 وب‌سایت: ${contactInfo.website}\n`;
-                    
-                    alert(contactText);
-                } else {
-                    alert('اطلاعات تماس در دسترس نیست.');
-                }
-            }
-            document.addEventListener('DOMContentLoaded', function() {
-                renderFreelancerProfiles();
-              });
-            
-              // Make functions globally available
-              window.viewFreelancerProfile = viewFreelancerProfile;
-              window.contactFreelancer = contactFreelancer;
-
-
-            // Setup search and filter functionality
-            function setupSearchAndFilter() {
-                const searchInput = document.querySelector('.search-box input');
-                const categoryChips = document.querySelectorAll('.category-chip');
-                
-                // Search functionality
-                if (searchInput) {
-                    searchInput.addEventListener('input', function() {
-                        const searchTerm = this.value.toLowerCase();
-                        filterProfiles(searchTerm);
-                    });
-                }
-            
-                // Category filter
-                categoryChips.forEach(chip => {
-                    chip.addEventListener('click', function() {
-                        const category = this.textContent;
-                        filterProfilesByCategory(category);
-                    });
-                });
-            }
-
-            // Filter profiles by search term
-            function filterProfiles(searchTerm) {
-                const profiles = loadPublishedProfiles();
-                const filteredProfiles = profiles.filter(profile => {
-                    const name = (profile.name || '').toLowerCase();
-                    const title = (profile.title || '').toLowerCase();
-                    const about = (profile.about || '').toLowerCase();
-                    const skills = (profile.skills || []).join(' ').toLowerCase();
-                    
-                    return name.includes(searchTerm) || 
-                           title.includes(searchTerm) || 
-                           about.includes(searchTerm) || 
-                           skills.includes(searchTerm);
-                });
-                
-                renderFilteredProfiles(filteredProfiles);
-            }
-
-            // Filter profiles by category
-            function filterProfilesByCategory(category) {
-                if (category === 'همه') {
-                    renderFreelancerProfiles();
-                    return;
-                }
-                
-                const profiles = loadPublishedProfiles();
-                const filteredProfiles = profiles.filter(profile => {
-                    const skills = profile.skills || [];
-                    return skills.some(skill => skill.toLowerCase().includes(category.toLowerCase()));
-                });
-                
-                renderFilteredProfiles(filteredProfiles);
-            }
-
-            // Render filtered profiles
-            function renderFilteredProfiles(profiles) {
-                const grid = document.getElementById('freelancersGrid');
-                
-                if (profiles.length === 0) {
-                    grid.innerHTML = `
-                        <div style="text-align: center; padding: 40px; color: #666;">
-                            <i class="fas fa-search" style="font-size: 48px; margin-bottom: 16px; opacity: 0.5;"></i>
-                            <h3>نتیجه‌ای یافت نشد</h3>
-                            <p>لطفاً جستجوی خود را تغییر دهید.</p>
-                        </div>
-                    `;
-                } else {
-                    grid.innerHTML = profiles.map(profile => generateFreelancerCard(profile)).join('');
-                }
-            }
-
-            // Initialize when DOM is loaded
-            document.addEventListener('DOMContentLoaded', function() {
-                renderFreelancerProfiles();
-                setupSearchAndFilter();
-            });
-
-            // Refresh profiles when page becomes visible
-            document.addEventListener('visibilitychange', function() {
-                if (!document.hidden) {
-                    renderFreelancerProfiles();
-                }
-            });
-
-            // Make functions globally available
-            window.viewFreelancerProfile = viewFreelancerProfile;
-            window.contactFreelancer = contactFreelancer;
-        })();
-
-        // === Snapbrand: Demo Data Initialization ===
-        (function(){
-            const PROFILE_STORAGE_KEY = 'freelancerProfiles';
-            
-            // Initialize demo data if no profiles exist
-            function initializeDemoData() {
-                try {
-                    const existingProfiles = JSON.parse(localStorage.getItem(PROFILE_STORAGE_KEY) || '[]');
-                    
-                    if (existingProfiles.length === 0) {
-                        const demoProfiles = [
-                            {
-                                id: 'demo1',
-                                name: 'علی رضایی',
-                                title: 'توسعه‌دهنده فرانت‌اند',
-                                location: 'تهران، ایران',
-                                about: 'توسعه‌دهنده فرانت‌اند با 5 سال سابقه کار در زمینه React و Vue.js. علاقه‌مند به ساخت رابط‌های کاربری مدرن و بهینه.',
-                                skills: ['React', 'Vue.js', 'JavaScript', 'CSS3', 'HTML5'],
-                                apps: ['VS Code', 'GitHub', 'Figma'],
-                                status: ['پروژه‌ای', 'فریلنس'],
-                                works: [],
-                                products: [],
-                                avatar: 'https://via.placeholder.com/80',
-                                cover: '',
-                                contactInfo: {
-                                    phone: '09120000001',
-                                    telegram: '@ali_developer',
-                                    whatsapp: '09120000001',
-                                    instagram: 'ali_web_dev'
-                                },
-                                createdAt: new Date().toISOString(),
-                                updatedAt: new Date().toISOString(),
-                                isPublished: true
-                            },
-                            {
-                                id: 'demo2',
-                                name: 'سارا اکبری',
-                                title: 'طراح UI/UX',
-                                location: 'اصفهان، ایران',
-                                about: 'طراح UI/UX با تمرکز بر تجربه کاربری و طراحی محصول. متخصص در طراحی اپلیکیشن‌های موبایل و وب.',
-                                skills: ['UI/UX', 'Figma', 'Adobe XD', 'Prototype', 'Sketch'],
-                                apps: ['Figma', 'Adobe XD', 'Sketch', 'InVision'],
-                                status: ['تمام‌وقت', 'پاره‌وقت'],
-                                works: [],
-                                products: [],
-                                avatar: 'https://via.placeholder.com/80',
-                                cover: '',
-                                contactInfo: {
-                                    phone: '09120000002',
-                                    telegram: '@sara_designer',
-                                    whatsapp: '09120000002',
-                                    instagram: 'sara_ui_ux'
-                                },
-                                createdAt: new Date().toISOString(),
-                                updatedAt: new Date().toISOString(),
-                                isPublished: true
-                            },
-                            {
-                                id: 'demo3',
-                                name: 'محمد کریمی',
-                                title: 'توسعه‌دهنده بک‌اند',
-                                location: 'مشهد، ایران',
-                                about: 'توسعه‌دهنده بک‌اند با تخصص در Node.js و Python. متخصص در طراحی API و پایگاه داده.',
-                                skills: ['Node.js', 'Python', 'MongoDB', 'PostgreSQL', 'Docker'],
-                                apps: ['VS Code', 'Postman', 'Docker Desktop', 'GitHub'],
-                                status: ['پروژه‌ای', 'تمام‌وقت'],
-                                works: [],
-                                products: [],
-                                avatar: 'https://via.placeholder.com/80',
-                                cover: '',
-                                contactInfo: {
-                                    phone: '09120000003',
-                                    telegram: '@mohammad_backend',
-                                    whatsapp: '09120000003',
-                                    instagram: 'mohammad_dev'
-                                },
-                                createdAt: new Date().toISOString(),
-                                updatedAt: new Date().toISOString(),
-                                isPublished: true
-                            }
-                        ];
-                        
-                        localStorage.setItem(PROFILE_STORAGE_KEY, JSON.stringify(demoProfiles));
-                        console.log('Demo profiles initialized');
-                    }
-                } catch (e) {
-                    console.error('Error initializing demo data:', e);
-                }
-            }
-            
-            // Initialize demo data when page loads
-            document.addEventListener('DOMContentLoaded', function() {
-                initializeDemoData();
-            });
-        })();
-
-        // Modal Functions
-        function openModal(modalId) {
-            document.getElementById(modalId).classList.add('active');
+        /* Base Styles (same as employer-panel.html) */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Vazirmatn', sans-serif;
         }
 
-        function closeModal(modalId) {
-            document.getElementById(modalId).classList.remove('active');
+        body {
+            background-color: #f8f9fa;
+            direction: rtl;
+            color: #333;
+            line-height: 1.6;
         }
 
-        // Close modal when clicking outside
-        window.onclick = function(event) {
-            if (event.target.classList.contains('modal')) {
-                event.target.classList.remove('active');
+
+:root{
+  --blue:#003DFF;
+  --yellow:#FFFF00;
+  --text:#fff;
+  --shadow:0 10px 30px rgba(2,6,23,.12);
+}
+*{box-sizing:border-box}
+body{margin:0;font:14px/1.9 "IRANSans","Vazirmatn",system-ui;background:#f8fafc;color:#0f172a}
+a{color:inherit;text-decoration:none}
+
+header{position:sticky;top:0;z-index:1000;background:var(--blue);color:var(--text);box-shadow:0 2px 10px rgba(0,0,0,.12)}
+.navbar{max-width:1200px;margin:auto;padding:10px 16px;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:10px}
+
+.cluster{display:flex;gap:14px;align-items:center}
+.toggle{
+  display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border-radius:10px;
+  border:1px solid rgba(255,255,255,.25);background:rgba(255,255,255,.06);
+  cursor:pointer;color:#fff;transition:background .2s ease,transform .1s ease;
+}
+.toggle:hover{background:rgba(255,255,255,.12)}
+.toggle:active{transform:translateY(1px)}
+.toggle .plus{color:var(--yellow);font-weight:900;font-size:18px;line-height:1}
+.icon svg{width:18px;height:18px;stroke:#fff}
+
+.logo{display:flex;align-items:center;justify-content:center;gap:10px;font-weight:900;font-size:22px;color:#fff}
+.logo-mark{width:32px;height:32px;border-radius:9px;background:#fff}
+
+.navlinks{display:flex;gap:10px;align-items:center;justify-content:flex-end}
+.link{padding:8px 10px;border-radius:10px}
+.link:hover{background:rgba(255,255,255,.12)}
+.divider{width:1px;height:18px;background:rgba(255,255,255,.35)}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border-radius:10px;border:1px solid rgba(255,255,255,.25);background:rgba(255,255,255,.06);color:#fff}
+.btn:hover{background:rgba(255,255,255,.12)}
+.btn .icon svg{width:18px;height:18px;stroke:#fff}
+
+.panel{position:absolute;top:58px;right:16px;width:320px;max-width:92vw;background:#fff;color:#0f172a;border-radius:16px;box-shadow:var(--shadow);border:1px solid #e5e7eb;overflow:hidden;transform-origin:top right;transform:scale(.98);opacity:0;pointer-events:none;transition:transform .18s ease,opacity .18s ease}
+.panel[data-side="employer"]{right:190px}
+.panel.open{transform:scale(1);opacity:1;pointer-events:auto}
+.panel h4{margin:0;padding:12px 14px;border-bottom:1px solid #eef2ff;background:#f8faff;font-size:14px}
+.panel a{display:flex;align-items:center;gap:10px;padding:12px 14px;border-bottom:1px solid #f1f5f9;color:#0f172a}
+.panel a:last-child{border-bottom:0}
+.panel a:hover{background:#f8fafc}
+
+@media(max-width:640px){
+  .cluster .label{display:none}
+  .logo{font-size:18px}
+  .divider{display:none}
+}
+
+main{max-width:1100px;margin:24px auto;padding:0 16px}
+.demo-card{background:#fff;border:1px solid #e5e7eb;border-radius:16px;box-shadow:var(--shadow);padding:18px}
+.slider-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+
+        .user-menu {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .notifications {
+            position: relative;
+            cursor: pointer;
+        }
+
+        .notification-icon {
+            font-size: 20px;
+        }
+
+        .notification-badge {
+            position: absolute;
+            top: -8px;
+            left: -8px;
+            background-color: #FFC107;
+            color: #333;
+            font-size: 12px;
+            font-weight: bold;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .user-profile {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            cursor: pointer;
+        }
+
+        .user-avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .main-layout {
+            display: flex;
+            min-height: calc(100vh - 70px);
+        }
+
+        .sidebar {
+            width: 250px;
+            background-color: white;
+            box-shadow: 2px 0 10px rgba(0, 0, 0, 0.05);
+            padding: 30px 0;
+        }
+
+        .sidebar-menu {
+            list-style: none;
+        }
+
+        .sidebar-menu li {
+            margin-bottom: 5px;
+        }
+
+        .sidebar-menu a {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 15px 30px;
+            color: #495057;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+
+        .sidebar-menu a:hover,
+        .sidebar-menu a.active {
+            background-color: #e3f2fd;
+            color: #0066CC;
+            border-right: 3px solid #0066CC;
+        }
+
+        .sidebar-menu i {
+            font-size: 18px;
+            width: 20px;
+            text-align: center;
+        }
+
+        .content {
+            flex: 1;
+            padding: 30px;
+        }
+
+        .page-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+
+        .page-title {
+            font-size: 28px;
+            font-weight: 700;
+            color: #333;
+        }
+
+        .btn-primary {
+            background-color: #0066CC;
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            font-size: 16px;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 500;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            text-decoration: none;
+        }
+
+        .btn-primary:hover {
+            background-color: #0052a3;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 102, 204, 0.3);
+        }
+
+        .btn-secondary {
+            background-color: #6C757D;
+            color: white;
+            border: none;
+            padding: 10px 25px;
+            font-size: 14px;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-secondary:hover {
+            background-color: #5a6268;
+        }
+
+        /* Freelancers Specific Styles */
+        .freelancers-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .search-filter {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+            flex: 1;
+        }
+
+        .search-box {
+            position: relative;
+            flex: 1;
+            max-width: 400px;
+        }
+
+        .search-box input {
+            width: 100%;
+            padding: 12px 45px 12px 20px;
+            border: 1px solid #dee2e6;
+            border-radius: 25px;
+            font-size: 14px;
+            transition: all 0.3s ease;
+        }
+
+        .search-box input:focus {
+            outline: none;
+            border-color: #0066CC;
+            box-shadow: 0 0 0 3px rgba(0, 102, 204, 0.1);
+        }
+
+        .search-box i {
+            position: absolute;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #6C757D;
+        }
+
+        .filter-dropdown {
+            position: relative;
+        }
+
+        .filter-btn {
+            background-color: white;
+            border: 1px solid #dee2e6;
+            padding: 12px 20px;
+            border-radius: 25px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 14px;
+            transition: all 0.3s ease;
+        }
+
+        .filter-btn:hover {
+            border-color: #0066CC;
+            color: #0066CC;
+        }
+
+        .categories-filter {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+
+        .category-chip {
+            background-color: white;
+            border: 1px solid #dee2e6;
+            padding: 8px 16px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: all 0.3s ease;
+        }
+
+        .category-chip:hover,
+        .category-chip.active {
+            background-color: #0066CC;
+            color: white;
+            border-color: #0066CC;
+        }
+
+        .freelancers-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 25px;
+        }
+
+        .freelancer-card {
+            background-color: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+        }
+
+        .freelancer-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .freelancer-header {
+            position: relative;
+            height: 120px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+        }
+
+        .freelancer-avatar {
+            position: absolute;
+            bottom: -40px;
+            right: 30px;
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            border: 4px solid white;
+            object-fit: cover;
+        }
+
+        .freelancer-body {
+            padding: 50px 25px 25px;
+        }
+
+        .freelancer-name {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        .freelancer-title {
+            color: #6C757D;
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+
+        .freelancer-rating {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            color: #FFC107;
+            margin-bottom: 15px;
+        }
+
+        .freelancer-description {
+            color: #495057;
+            font-size: 14px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .freelancer-skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 20px;
+        }
+
+        .skill-tag {
+            background-color: #e9ecef;
+            color: #495057;
+            padding: 4px 10px;
+            border-radius: 12px;
+            font-size: 12px;
+        }
+
+        .freelancer-stats {
+            display: flex;
+            justify-content: space-around;
+            padding: 15px 0;
+            border-top: 1px solid #eee;
+            margin-bottom: 15px;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-value {
+            font-size: 18px;
+            font-weight: 600;
+            color: #0066CC;
+        }
+
+        .stat-label {
+            font-size: 12px;
+            color: #6C757D;
+        }
+
+        .freelancer-actions {
+            display: flex;
+            gap: 10px;
+        }
+
+        .freelancer-actions button {
+            flex: 1;
+            padding: 10px;
+            font-size: 14px;
+            border-radius: 8px;
+        }
+
+        /* Freelancer Profile Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .modal.active {
+            display: flex;
+        }
+
+        .modal-content {
+            background-color: white;
+            border-radius: 15px;
+            padding: 30px;
+            width: 90%;
+            max-width: 800px;
+            max-height: 90vh;
+            overflow-y: auto;
+        }
+
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 25px;
+        }
+
+        .modal-title {
+            font-size: 24px;
+            font-weight: 700;
+            color: #333;
+        }
+
+        .modal-close {
+            background: none;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+            color: #6C757D;
+        }
+
+        .profile-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .profile-avatar-large {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #0066CC;
+            margin-bottom: 15px;
+        }
+
+        .profile-name {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        .profile-title {
+            color: #6C757D;
+            margin-bottom: 15px;
+        }
+
+        .profile-rating {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
+            color: #FFC107;
+        }
+
+        .profile-section {
+            margin-bottom: 30px;
+        }
+
+        .section-title {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+        }
+
+        .portfolio-item {
+            border-radius: 10px;
+            overflow: hidden;
+            height: 150px;
+        }
+
+        .portfolio-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .reviews-list {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .review-item {
+            background-color: #f8f9fa;
+            padding: 15px;
+            border-radius: 10px;
+        }
+
+        .review-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .reviewer-info {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .reviewer-avatar {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .review-rating {
+            color: #FFC107;
+        }
+
+        .review-text {
+            color: #495057;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        /* Responsive */
+        @media (max-width: 992px) {
+            .freelancers-grid {
+                grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
             }
         }
 
-        // Category Filter
-        document.querySelectorAll('.category-chip').forEach(chip => {
-            chip.addEventListener('click', function() {
-                document.querySelectorAll('.category-chip').forEach(c => c.classList.remove('active'));
-                this.classList.add('active');
-                // In a real application, this would filter the freelancers
-            });
-        });
+        @media (max-width: 768px) {
+            .main-layout {
+                flex-direction: column;
+            }
+            
+            .sidebar {
+                width: 100%;
+                order: 2;
+            }
+            
+            .content {
+                order: 1;
+            }
+            
+            .sidebar-menu {
+                display: flex;
+                overflow-x: auto;
+                padding: 0 15px;
+            }
+            
+            .sidebar-menu li {
+                margin-bottom: 0;
+                margin-left: 10px;
+            }
+            
+            .freelancers-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .search-filter {
+                width: 100%;
+            }
+            
+            .freelancers-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .portfolio-grid {
+                grid-template-columns: 1fr;
+            }
+        }
 
-        // Form submission
-        document.querySelectorAll('form').forEach(form => {
-            form.addEventListener('submit', function(e) {
-                e.preventDefault();
-                alert('پیشنهاد با موفقیت ارسال شد!');
-                closeModal('hireFreelancerModal');
-            });
-        });
-    </script>
-    <script src="./assets/js/modiriat-freelancers.js"></script>
-</body>
-</html>
+:root{
+  --blue:#003DFF;
+  --white:#ffffff;
+  --max:1200px;
+}
+body{margin:0;font-family:"IRANSans","Vazirmatn",Tahoma,sans-serif}
+footer.sb{background:var(--blue);color:var(--white)}
+.sb .wrap{max-width:var(--max);margin:auto;padding:22px 16px}
+.sb .top{display:flex;align-items:center;justify-content:space-between;gap:16px}
+.sb .logo{display:flex;align-items:center;gap:10px;font-weight:900}
+.sb .logo-b{width:30px;height:30px;border-radius:9px;background:#fff}
+.sb .soc{display:flex;gap:14px}
+.sb .icon svg{width:24px;height:24px;fill:#fff;stroke:none}
+.sb .icon:hover{opacity:.9;transform:translateY(-1px);transition:all .15s ease}
+.sb .cols{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;padding:18px 0}
+.sb .col h4{margin:0 0 8px 0;font-size:14px;color:#fff}
+.sb .col a{display:block;color:#fff;padding:6px 0;font-weight:500;text-decoration:none;opacity:.9}
+.sb .col a:hover{opacity:1;text-decoration:underline;text-decoration-color:#fff}
+.sb .enamad{display:flex;align-items:flex-start;justify-content:flex-end}
+.sb .enamad img{height:140px;width:auto;border-radius:10px;padding:6px;display:block}
+.sb .bottom{text-align:center;padding-top:8px;font-size:13.5px;opacity:.95}
+@media(max-width:900px){.sb .cols{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:620px){.sb .top{flex-direction:column;gap:10px}.sb .cols{grid-template-columns:1fr}.sb .enamad{justify-content:flex-start}}
