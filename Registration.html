@@ -1,28 +1,199 @@
 <!DOCTYPE html>
-<html lang="fa" dir="rtl" >
+<html lang="fa" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>صفحه ثبت‌نام</title>
-  <link rel="stylesheet" href="./assets/css/Registration.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ثبت‌نام | اسنپ‌برند</title>
+    <link rel="stylesheet" href="./assets/css/Registration.css">
 </head>
 <body>
-  <div class="register-card">
-  <h2>ثبت‌نام</h2>
-  <div id="message" class="message"></div>
-  <div class="form-group">
-    <label for="name">نام و نام خانوادگی</label>
-    <input type="text" id="name" placeholder="نام خود را وارد کنید">
-  </div>
-  <div class="form-group">
-    <label for="email">ایمیل</label>
-    <input type="email" id="email" placeholder="example@email.com">
-  </div>
-  <div class="form-group">
-    <label for="password">رمز عبور</label>
-    <input type="password" id="password" placeholder="رمز عبور خود را وارد کنید">
-  </div>
-    <button ><a style="color: aliceblue;" href="./index.html">ثبت‌نام</a></button
+
+<div class="card" id="step1">
+  <img src="./assets/img/Snap Brand Logo BLUE_095401.png" alt="">
+  <div class="title">ثبت‌نام</div>
+    <div class="subtitle">لطفاً شماره موبایل خود را وارد کنید</div>
+    <form class="form" onsubmit="sendVerificationCode(event)">
+        <input id="phone" class="input" placeholder="09xxxxxxxxx" maxlength="11" inputmode="numeric" />
+        <div class="helper" id="phoneErr"></div>
+        <button class="btn" type="submit">ارسال کد تأیید</button>
+    </form>
+    <div class="switch-auth">
+        <span>قبلاً ثبت‌نام کرده‌اید؟</span> <a href="#" onclick="toLogin()">ورود</a>
+    </div>
 </div>
+
+<div class="card" id="step2" style="display:none">
+    <div class="logo"><i></i> اسنپ‌برند</div>
+    <div class="title">تأیید شماره <span class="badge">امن</span></div>
+    <div class="subtitle">کد یکبارمصرف به <span id="phoneShown">...</span> ارسال شد</div>
+
+    <form class="form" onsubmit="verifyCode(event)">
+        <div class="sms-row">
+            <input id="otp" class="input otp" inputmode="numeric" maxlength="6" placeholder="— — — — — —" autocomplete="one-time-code" />
+            <button type="button" class="btn" style="width:170px" onclick="resendCode()" id="resendBtn" disabled>ارسال مجدد</button>
+        </div>
+        <div style="display:flex; justify-content:space-between; align-items:center">
+            <div class="timer" id="timer">60 ثانیه تا ارسال مجدد</div>
+        </div>
+        <div class="helper" id="otpErr"></div>
+        <button class="btn" type="submit">تأیید و ادامه</button>
+    </form>
+
+    <div class="switch-auth"><a href="#" onclick="backToPhone()">بازگشت</a></div>
+</div>
+
+<div class="card" id="step3" style="display:none">
+    <div class="logo"><i></i> اسنپ‌برند</div>
+    <div class="title">انتخاب نقش</div>
+    <div class="subtitle">لطفاً نقش خود را انتخاب کنید</div>
+
+    <div class="role-selection" id="roleSelection">
+        <div class="role-option" onclick="selectRole(this, 'freelancer')">
+            <input type="radio" name="role" id="freelancer" value="freelancer">
+            <label for="freelancer">فریلنسر هستم</label>
+        </div>
+        
+        <div class="role-option" onclick="selectRole(this, 'employer')">
+            <input type="radio" name="role" id="employer" value="employer">
+            <label for="employer">کارفرما هستم</label>
+        </div>
+        
+        <div class="helper" id="roleErr"></div>
+        <button class="btn" onclick="completeRegistration()">تکمیل ثبت‌نام</button>
+    </div>
+
+    <div class="switch-auth"><a href="#" onclick="backToVerification()">بازگشت</a></div>
+</div>
+
+<script>
+let countdown = 60;
+let timerId;
+let selectedRole = null;
+let phoneNumber = '';
+
+function sendVerificationCode(e) {
+    e.preventDefault();
+    const phoneInput = document.getElementById('phone');
+    phoneNumber = phoneInput.value.trim();
+    const err = document.getElementById('phoneErr');
+    
+    // Validate Iranian mobile number
+    if (!/^09[0-9]{9}$/.test(phoneNumber)) {
+        err.textContent = 'شماره موبایل معتبر نیست.';
+        return;
+    }
+    
+    err.textContent = '';
+    document.getElementById('phoneShown').textContent = phoneNumber;
+    document.getElementById('step1').style.display = 'none';
+    document.getElementById('step2').style.display = 'block';
+    
+    startTimer();
+    
+    // In a real application, send the verification code via SMS
+    console.log('Sending verification code to:', phoneNumber);
+    alert(`پیامک حاوی کد تأیید به شماره ${phoneNumber} ارسال شد (شبیه‌سازی)`);
+    
+    // For demo purposes, set a fixed code (123456)
+    window.verificationCode = '123456';
+}
+
+function startTimer() {
+    clearInterval(timerId);
+    countdown = 60;
+    document.getElementById('resendBtn').disabled = true;
+    document.getElementById('timer').textContent = countdown + ' ثانیه تا ارسال مجدد';
+    
+    timerId = setInterval(() => {
+        countdown--;
+        document.getElementById('timer').textContent = countdown + ' ثانیه تا ارسال مجدد';
+        
+        if (countdown <= 0) {
+            clearInterval(timerId);
+            document.getElementById('resendBtn').disabled = false;
+            document.getElementById('timer').textContent = 'می‌توانید دوباره کد بگیرید';
+        }
+    }, 1000);
+}
+
+function resendCode() {
+    // Reset and start timer again
+    startTimer();
+    
+    // Simulate resending SMS
+    alert(`کد جدید به شماره ${phoneNumber} ارسال شد (شبیه‌سازی)`);
+}
+
+function verifyCode(e) {
+    e.preventDefault();
+    const otpInput = document.getElementById('otp');
+    const enteredCode = otpInput.value.trim();
+    const err = document.getElementById('otpErr');
+    
+    // Check if the entered code matches the sent code
+    if (enteredCode === window.verificationCode) {
+        // Stop the timer
+        clearInterval(timerId);
+        
+        // Hide verification form and show role selection
+        document.getElementById('step2').style.display = 'none';
+        document.getElementById('step3').style.display = 'block';
+        document.getElementById('roleSelection').style.display = 'block';
+    } else {
+        err.textContent = 'کد تأیید نامعتبر است. لطفاً دوباره تلاش کنید.';
+    }
+}
+
+function selectRole(element, role) {
+    // Remove selected class from all options
+    const allOptions = document.querySelectorAll('.role-option');
+    allOptions.forEach(option => option.classList.remove('selected'));
+    
+    // Add selected class to clicked option
+    element.classList.add('selected');
+    
+    // Check the radio button inside the selected option
+    const radioButton = element.querySelector('input[type="radio"]');
+    radioButton.checked = true;
+    
+    selectedRole = role;
+}
+
+function completeRegistration() {
+    const err = document.getElementById('roleErr');
+    
+    if (!selectedRole) {
+        err.textContent = 'لطفاً نقش خود را انتخاب کنید';
+        return;
+    }
+    
+    err.textContent = '';
+    
+    // In a real application, you would send the registration data to your backend
+    console.log('Registration completed:');
+    console.log('Phone:', phoneNumber);
+    console.log('Role:', selectedRole);
+    
+    // Show success message
+    alert(`ثبت‌نام با موفقیت انجام شد! نقش: ${selectedRole === 'freelancer' ? 'فریلنسر' : 'کارفرما'}`);
+    
+    // Redirect to dashboard or home page
+    // window.location.href = '/dashboard';
+}
+
+function backToPhone() {
+    document.getElementById('step2').style.display = 'none';
+    document.getElementById('step1').style.display = 'block';
+}
+
+function backToVerification() {
+    document.getElementById('step3').style.display = 'none';
+    document.getElementById('step2').style.display = 'block';
+}
+
+function toLogin() {
+    alert('صفحه ورود در حال توسعه است.');
+}
+</script>
 </body>
 </html>
