@@ -1,5 +1,31 @@
+/* استایل‌های مربوط به آواتار */
+.avatar {
+  position: absolute;
+  bottom: -44px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #fff;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, .12);
+  z-index: 2;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
 
-        :root {
+.avatar:hover {
+  opacity: 0.8;
+  transform: translateX(-50%) scale(1.05);
+}
+
+.avatar.drag-over {
+  border: 3px dashed #4f46e5;
+  background-color: rgba(79, 70, 229, 0.1);
+}
+
+:root {
             --brand: #4f46e5;
             --brand2: #7c3aed;
             --brand3: #a855f7;
@@ -456,6 +482,7 @@
             padding: 6px 10px;
             border-radius: 10px;
             font-size: 13px;
+            color: black;
         }
 
         .input, select, textarea {
