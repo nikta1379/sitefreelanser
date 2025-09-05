@@ -40,6 +40,13 @@
           padding-right: 90px;
           
         }
+        .subtitle {
+            color: var(--muted);
+            font-size: 14px;
+            text-align: center;
+            margin-bottom: 40px;
+            margin-top: 10px;
+        }
         
         .logo {
             display: flex;
@@ -70,9 +77,9 @@
         .subtitle {
             color: var(--muted);
             font-size: 14px;
-            text-align:right;
-            margin-bottom: 60px;
-            margin-top: 40px;
+            text-align: center;
+            margin-bottom: 18px;
+            margin-top: 10px;
         }
         
         .form {
@@ -205,3 +212,4 @@
             margin-top: 14px;
             font-size: 14px;
         }
+  
