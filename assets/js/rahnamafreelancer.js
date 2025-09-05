@@ -1,4 +1,4 @@
-<script>
+
 function setupToggle(tId, pId){
   const t=document.getElementById(tId), p=document.getElementById(pId);
   t.addEventListener('click',()=>{
@@ -54,4 +54,3 @@ prevBtn.addEventListener('click', () => {
 
 window.addEventListener('resize', showSlide);
 
-</script>
