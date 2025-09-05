@@ -1,4 +1,3 @@
-
 let countdown = 60;
 let timerId;
 let selectedRole = null;
