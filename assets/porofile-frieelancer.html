@@ -1,415 +1,0 @@
-<!DOCTYPE html>
-<html lang="fa" dir="rtl">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>مدیریت پروفایل فریلنسر</title>
-    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="./assets/css/profile-freelancer.css">
-</head>
-<body>
-    <header>
-            <div class="navbar">
-                <div class="cluster">
-                    <div class="toggle" id="tFreelancer" aria-expanded="false" aria-controls="pFreelancer">
-                        <span class="icon" aria-hidden="true">
-                            <svg fill="none" viewBox="0 0 24 24" stroke-width="2">
-                                <rect x="3" y="4" width="18" height="12" rx="2"></rect>
-                                <path d="M8 20h8M12 16v4"></path>
-                            </svg>
-                        </span>
-                        <span class="label">فریلنسر هستم</span>
-                        <span class="plus">+</span>
-                    </div>
-                    <div class="toggle" id="tEmployer" aria-expanded="false" aria-controls="pEmployer">
-                        <span class="icon" aria-hidden="true">
-                            <svg fill="none" viewBox="0 0 24 24" stroke-width="2">
-                                <path d="M9 6V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v1"></path>
-                                <rect x="3" y="7" width="18" height="12" rx="2"></rect>
-                                <path d="M3 12h18"></path>
-                            </svg>
-                        </span>
-                        <span class="label">کارفرما هستم</span>
-                        <span class="plus">+</span>
-                    </div>
-                    <nav class="panel" id="pFreelancer">
-                        <h4>فریلنسر — شروع سریع</h4>
-                        <a href="./rahnamafreelancer.html">راهنمای شروع برای فریلنسر</a>
-                        <a href="./plan.html">پلن‌های همکاری</a>
-                    </nav>
-                    <nav class="panel" id="pEmployer" data-side="employer">
-                        <h4>کارفرما — شروع سریع</h4>
-                        <a href="/rahnamakarfarma.html">راهنمای شروع برای کارفرما</a>
-                        <a href="./plan.html">پلن‌های همکاری</a>
-                    </nav>
-                </div>
-
-                <a class="logo" href="./index.html"><img src="./assets/img/logo png 2_103307.png" alt=""></a>
-
-                <div class="navlinks">
-                    <a class="link" href="./index.html">خانه</a>
-                    <a class="link" href="./shop.html">فروشگاه</a>
-                    <span class="divider"></span>
-                    <a class="btn" href="./Registration.html">ثبت‌نام</a>
-                    <a class="btn" href="./login.html">
-                        <span class="icon" aria-hidden="true">
-                            <svg fill="none" viewBox="0 0 24 24" stroke-width="2">
-                                <circle cx="12" cy="8" r="4"></circle>
-                                <path d="M4 20c2-4 6-6 8-6s6 2 8 6"></path>
-                            </svg>
-                        </span>
-                        <span>ورود</span>
-                    </a>
-                </div>
-            </div>
-        </header>
-<div class="container">
-  <div class="card">
-    <div class="cover" id="coverArea">
-      <img class="bg" id="coverImg" style="display:none" alt="cover" />
-      <div class="overlay"></div>
-      <div class="controls">
-        <label class="btn btn-ghost btn-sm" for="coverInput">تغییر کاور</label>
-        <input id="coverInput" type="file" accept="image/*" style="display:none">
-        <button class="btn btn-danger btn-sm" onclick="deleteCover()">حذف کاور</button>
-      </div>
-      <img id="avatar" class="avatar" src="https://placehold.co/200x200/png" alt="avatar">
-    </div>
-
-    <div class="identity">
-      <h1 id="nameT">نام فریلنسر</h1>
-      <div class="title" id="titleT">عنوان شغلی</div>
-      <div class="loc" id="locT">📍—</div>
-      <div class="row" style="justify-content:center;margin-top:8px">
-        <label class="btn btn-ghost btn-sm" for="avatarInput">تغییر آواتار</label>
-        <input id="avatarInput" type="file" accept="image/*" style="display:none">
-        <button class="btn btn-danger btn-sm" onclick="deleteAvatar()">حذف آواتار</button>
-      </div>
-    </div>
-
-    <div class="tabs">
-      <div class="tab active" data-tab="profile">پروفایل</div>
-      <div class="tab" data-tab="portfolio">نمونه‌کارها</div>
-      <div class="tab" data-tab="products">محصولات من</div>
-      <div class="tab" data-tab="plan">پلن فعال</div>
-      <div class="tab" data-tab="followers">فالورها</div>
-      <div class="tab" data-tab="following">فالوینگ‌ها</div>
-      <div class="tab" data-tab="settings">تنظیمات</div>
-    </div>
-
-    <div class="tabpanes">
-      <section class="section active" id="profile">
-        <div class="grid">
-          <div class="split">
-            <div>
-              <label>نام و نام‌خانوادگی</label>
-              <input class="input" id="nameInput" placeholder="مثلاً سارا رضایی">
-            </div>
-            <div>
-              <label>عنوان شغلی</label>
-              <input class="input" id="titleInput" placeholder="UI/UX Designer">
-            </div>
-          </div>
-
-          <div class="split">
-            <div>
-              <label>کشور/شهر</label>
-              <input class="input" id="locInput" placeholder="تهران، ایران">
-            </div>
-            <div>
-              <label>وضعیت همکاری</label>
-              <div class="row">
-                <label class="chip"><input type="checkbox" class="status" value="پروژه‌ای"> پروژه‌ای</label>
-                <label class="chip"><input type="checkbox" class="status" value="تمام‌وقت"> تمام‌وقت</label>
-                <label class="chip"><input type="checkbox" class="status" value="پاره‌وقت"> پاره‌وقت</label>
-                <label class="chip"><input type="checkbox" class="status" value="فریلنس"> فریلنس</label>
-              </div>
-              <div class="grid" id="statusTokens" style="grid-auto-flow:column;justify-content:start"></div>
-            </div>
-          </div><!-- Snapbrand: Inline Contact Card (inside profile card, before About Me) -->
-<div class="card" id="contactInlineCard" dir="rtl" style="margin:16px 0;padding:16px;border:1px solid #E5E7EB;border-radius:16px">
-  <div class="row" style="justify-content:space-between;align-items:center;margin-bottom:8px">
-    <h3 style="margin:0;font-size:16px">اطلاعات تماس</h3>
-    <div class="muted" style="font-size:12px">فقط مواردِ پرشده نمایش داده می‌شود</div>
-  </div>
-  <div class="grid" style="grid-template-columns:1fr 1fr;gap:12px">
-    <input class="input" id="instagramInput" placeholder="اینستاگرام (instagram.com/username)">
-    <input class="input" id="linkedinInput"  placeholder="لینکدین (linkedin.com/in/username)">
-    <input class="input" id="telegramInput"  placeholder="تلگرام (t.me/username)">
-    <input class="input" id="whatsappInput"  placeholder="واتس‌اپ (09120000000)">
-    <input class="input" id="phoneInput"     placeholder="شماره تماس (09120000000)">
-    <input class="input" id="websiteInput"   placeholder="وب‌سایت (https://example.com)">
-    <input class="input" id="otherInput"     placeholder="سایر (هر آدرس یا شناسه دیگر)">
-  </div>
-  <div class="row" style="justify-content:flex-end;gap:8px;margin-top:12px">
-    <button class="btn btn-primary btn-sm" onclick="saveContactInfo()">ذخیره</button>
-    <button class="btn btn-ghost btn-sm" onclick="clearContactForm()">پاک‌سازی</button>
-  </div>
-  <ul id="contactMiniList" style="list-style:none;padding:0;margin:12px 0 0 0"></ul>
-</div>
-
-
-          <div>
-            <label>درباره من</label>
-            <textarea id="about" class="input" placeholder="مختصر بنویس که چرا باید تو را انتخاب کنند."></textarea>
-          </div>
-
-          <div>
-            <div class="row" style="justify-content:space-between">
-              <h3 style="margin:0">مهارت‌ها (دسته‌بندی)</h3>
-              <input class="input" id="skillSearch" placeholder="جستجو در مهارت‌ها…" style="max-width:280px">
-            </div>
-            <div class="accordion" id="skillsAcc"></div>
-            <div class="row" id="skillTokens"></div>
-          </div>
-
-          <div>
-            <div class="row" style="justify-content:space-between">
-              <h3 style="margin:0">اپلیکیشن</h3>
-              <div class="row">
-                <input class="input" id="appSearch" placeholder="جستجوی اپلیکیشن…" style="max-width:280px">
-                <button class="btn btn-ghost btn-sm" id="addAppBtn">+ افزودن اپلیکیشن</button>
-              </div>
-            </div>
-            <div class="tool-list" id="appList"></div>
-            <div class="row" id="appTokens"></div>
-          </div>
-        </div>
-      </section>
-
-      <section class="section" id="portfolio">
-        <div class="row" style="justify-content:space-between">
-          <h3 style="margin:0">نمونه‌کارها</h3>
-          <button class="btn btn-primary btn-sm" id="addWork">+ افزودن نمونه‌کار</button>
-        </div>
-        <div class="gallery" id="workList" style="margin-top:10px"></div>
-      </section>
-
-      <section class="section" id="products">
-        <div class="row" style="justify-content:space-between">
-          <h3 style="margin:0">محصولات من</h3>
-          <button class="btn btn-primary btn-sm" id="addProduct">+ افزودن محصول</button>
-        </div>
-        <div id="productList" class="grid" style="margin-top:10px"></div>
-      </section>
-
-      
-      <section class="section" id="plan">
-        <div class="planbox">
-          <div>
-            <div><strong>پلن فعال:</strong> <span id="planName">Business</span></div>
-            <div class="muted">تاریخ شروع: <span id="planStart">1403/05/01</span> — پایان: <span id="planEnd">1403/06/01</span></div>
-            <div class="muted">روز باقی‌مانده: <span id="planLeft">—</span></div>
-          </div>
-          <div style="flex:1;max-width:360px">
-            <div class="bar"><span id="planBar"></span></div>
-          </div>
-          <div class="row" style="gap:8px;margin-inline-start:12px">
-            <button class="btn btn-primary btn-sm">ارتقا</button>
-            <button class="btn btn-ghost btn-sm">تمدید</button>
-          </div>
-        </div>
-        <p class="muted" style="margin-top:8px">* این داده‌ها دمو هستند. در نسخه واقعی از بک‌اند/ووکامرس خوانده می‌شود.</p>
-      </section>
-
-
-      <section class="section" id="followers">
-        <div class="row" style="justify-content:space-between">
-          <h3 style="margin:0">فالورها</h3>
-          <div class="muted">(نمایش فقط برای شما)</div>
-        </div>
-        <div id="followersGrid" class="user-grid" style="margin-top:10px"></div>
-      </section>
-
-      <section class="section" id="following">
-        <div class="row" style="justify-content:space-between">
-          <h3 style="margin:0">فالوینگ‌ها</h3>
-          <div class="muted">(نمایش فقط برای شما)</div>
-        </div>
-        <div id="followingGrid" class="user-grid" style="margin-top:10px"></div>
-      </section>
-
-      <section class="section" id="settings">
-        <h3 style="margin:0 0 12px 0">تنظیمات</h3>
-        <div class="grid" style="grid-template-columns:1fr 1fr;gap:12px">
-          <div class="card" style="padding:14px">
-            <div class="row" style="justify-content:space-between"><strong>امنیت</strong></div>
-            <div class="row" style="margin-top:10px">
-              <button class="btn btn-ghost btn-sm" onclick="alert('دمو')">تغییر رمز عبور</button>
-              <button class="btn btn-ghost btn-sm" onclick="alert('دمو')">فعال‌سازی 2FA</button>
-            </div>
-          </div>
-          <div class="card" style="padding:14px">
-            <div class="row" style="justify-content:space-between"><strong>نوتیفیکیشن</strong></div>
-            <label class="checkline" style="margin-top:8px"><input type="checkbox" id="notiFollow" checked> <span>آگاه‌سازی وقتی کسی شما را فالو کرد</span></label>
-            <label class="checkline"><input type="checkbox" id="notiLike" checked> <span>آگاه‌سازی لایک‌ها</span></label>
-            <label class="checkline"><input type="checkbox" id="notiMsg" checked> <span>پیام‌های جدید</span></label>
-          </div>
-        </div>
-      </section>
-
-    </div>
-  </div>
-</div>
-
-<div class="toast" id="toast" style="display:none">ذخیره شد.</div>
-
-<!-- MODALS -->
-<dialog id="modalWork">
-  <div style="padding:16px 18px; border-bottom:1px solid var(--border); font-weight:700">افزودن/ویرایش نمونه‌کار</div>
-  <div style="padding:16px 18px" class="grid">
-
-    <div>
-      <label>فایل‌های پروژه</label>
-      <div id="wDrop" class="drop">
-        <div>فایل‌ها را بکش و رها کن یا <label for="wFiles" style="color:var(--brand);cursor:pointer">انتخاب کن</label></div>
-        <input id="wFiles" type="file" multiple style="display:none"
-         accept="image/*,video/*,audio/*,.zip,.rar,.7z,.pdf,.psd,.ai,.fig,.sketch,.xd,.blend,.aep,.prproj,.csv,.json,.txt">
-      </div>
-      <div id="wThumbs" class="thumbs"></div>
-    </div>
-
-    <div class="split">
-      <div><label>عنوان</label><input id="wTitle" class="input" placeholder="مثلاً طراحی لندینگ پیج"></div>
-      <div><label>لینک (اختیاری)</label><input id="wLink" class="input" placeholder="https://..."></div>
-    </div>
-    <div><label>توضیح کوتاه</label><input id="wShort" class="input" placeholder="یک توضیح کوتاه"></div>
-    <div><label>توضیح کامل</label><textarea id="wDesc" class="input" placeholder="شرح پروژه"></textarea></div>
-
-    <div class="split">
-      <details class="acc" id="skillsAcc" open><summary>مهارت‌ها <span class="chev">▾</span></summary><div class="acc-body"><div class="acc-head"><label>مهارت (دسته‌بندی)</label><div class=""><input id="wSkillSearch" class="input" placeholder="جستجو در مهارت‌ها…"></div></div><div class="acc-scroll"><div class="accordion" id="wSkillsAcc" style="margin-top:8px"></div></div><div class="row" id="wSkillTok" class="row token-row"></div></div></details>
-      <details class="acc" id="appsAcc" open><summary>اپلیکیشن‌ها (اختیاری) <span class="chev">▾</span></summary><div class="acc-body"><div class="acc-head"><label>اپلیکیشن</label><div class=""><div class="row">
-          <input id="wAppSearch" class="input" placeholder="جستجوی اپلیکیشن…">
-          <button class="btn btn-ghost btn-sm" id="wAddApp">+ افزودن اپلیکیشن</button>
-        </div></div><div class="acc-scroll"><div class="tool-list" id="wApps" style="margin-top:8px"></div></div><div class="row" id="wAppTok" class="row token-row"></div></div></details>
-    </div>
-
-    <!-- New: Uploader for portfolio -->
-  </div>
-  <div style="padding:12px 18px; border-top:1px solid var(--border); display:flex; gap:8px; justify-content:flex-end">
-    <button class="btn btn-ghost" data-close>انصراف</button>
-    <button class="btn btn-primary" id="wSave">ذخیره</button>
-  </div>
-</dialog>
-
-<dialog id="modalProduct">
-  <div style="padding:16px 18px; border-bottom:1px solid var(--border); font-weight:700">ایجاد/ویرایش محصول</div>
-  <div style="padding:16px 18px" class="grid">
-
-    <div>
-      <label>فایل‌ها/گالری محصول</label>
-      <div id="pDrop" class="drop">
-        <div>بکش و رها کن یا <label for="pFiles" style="color:var(--brand);cursor:pointer">انتخاب فایل</label></div>
-        <input id="pFiles" type="file" multiple style="display:none"
-         accept="image/*,video/*,audio/*,.zip,.rar,.7z,.pdf,.psd,.ai,.fig,.sketch,.xd,.blend,.aep,.prproj,.csv,.json,.txt">
-      </div>
-      <div id="pThumbs" class="thumbs"></div>
-    </div>
-
-    <div class="split">
-      <div><label>نام محصول</label><input id="pTitle" class="input" placeholder="مثلاً پک تمپلیت استوری"></div>
-      <div><label>قیمت (تومان)</label><input id="pPrice" class="input" type="number" placeholder="350000"></div>
-    </div>
-    <div class="split">
-      <div><label>زمان تحویل (روز)</label><input id="pDays" class="input" type="number" placeholder="1"></div>
-      <div><label>تعداد فایل/مجوز</label><input id="pCount" class="input" type="number" placeholder="1"></div>
-    </div>
-    <div><label>توضیح کوتاه</label><input id="pShort" class="input" placeholder="خلاصه محصول"></div>
-    <div><label>توضیح کامل</label><textarea id="pDesc" class="input" placeholder="شرح کامل محصول"></textarea></div>
-
-    <!-- New: Uploader for product gallery/files -->
-  </div>
-  <div style="padding:12px 18px; border-top:1px solid var(--border); display:flex; gap:8px; justify-content:flex-end">
-    <button class="btn btn-ghost" data-close>انصراف</button>
-    <button class="btn btn-primary" id="pSave">انتشار/ذخیره</button>
-  </div>
-</dialog>
-<footer class="sb">
-        <div class="wrap">
-            <!-- Top -->
-            <div class="top">
-                <img src="./assets/img/logo png 2_103307.png" alt="">
-                <div class="soc">
-                    <!-- Instagram -->
-                    <a class="icon" href="#" title="Instagram" aria-label="Instagram">
-                        <svg viewBox="0 0 24 24">
-                            <path d="M7 2C4.24 2 2 4.24 2 7v10c0 2.76 2.24 5 5 5h10c2.76 0 5-2.24 
-                            5-5V7c0-2.76-2.24-5-5-5H7zm10 2c1.66 0 3 1.34 
-                            3 3v10c0 1.66-1.34 3-3 3H7c-1.66 0-3-1.34-3-3V7c0-1.66 
-                            1.34-3 3-3h10zm-5 3a5 5 0 100 10 5 5 0 000-10zm0 
-                            2a3 3 0 110 6 3 3 0 010-6zm4.5-2a1.5 1.5 0 11-.001 3.001A1.5 
-                            1.5 0 0116.5 7z"/>
-                        </svg>
-                    </a>
-                    <!-- LinkedIn -->
-                    <a class="icon" href="#" title="LinkedIn" aria-label="LinkedIn">
-                        <svg viewBox="0 0 24 24"><path d="M4.98 3.5A2.5 2.5 0 110 3.5a2.5 2.5 0 014.98 0zM.5 8.5h4.9V24H.5zM8 
-                        8.5h4.7v2.2h.08c.65-1.2 2.24-2.5 4.6-2.5 4.9 0 5.8 3.3 5.8 7.7V24h-4.9v-7.7c0-1.9-.02-4.2-2.5-4.2s-2.9 
-                        2-2.9 4.1V24H8z"/></svg>
-                    </a>
-                    <!-- Telegram -->
-                    <a class="icon" href="#" title="Telegram" aria-label="Telegram">
-                        <svg viewBox="0 0 24 24"><path d="M9.04 15.46l-.37 5.23c.53 0 .76-.23 1.04-.5l2.5-2.4 
-                        5.18 3.79c.95.52 1.63.25 1.89-.88l3.43-16.09h.01c.3-1.43-.52-1.99-1.45-1.64L1.38 
-                        9.24c-1.37.53-1.35 1.3-.24 1.65l5.97 1.86L19.4 5.86c.59-.39 
-                        1.13-.18.69.21"/></svg>
-                    </a>
-                    <!-- WhatsApp (اصلاح‌شده کامل با گوشی داخلی) -->
-                    <a class="icon" href="#" title="WhatsApp" aria-label="WhatsApp">
-                        <svg viewBox="0 0 24 24">
-                            <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.16 
-                            5.317 5.477 0 12.057 0c3.226-.001 6.251 1.254 8.52 
-                            3.521a11.86 11.86 0 0 1 3.481 8.436c-.003 6.627-5.383 
-                            12.001-12.01 12.001-2.042-.001-4.035-.521-5.788-1.507L.057 
-                            24zm6.597-3.807c1.676.995 3.276 1.591 5.392 
-                            1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 
-                            0-9.887 4.434-9.889 9.885a9.842 9.842 0 0 0 1.599 
-                            5.29l-.999 3.648 3.889-1.638z"/>
-                            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.967-.94 
-                            1.164-.173.198-.347.223-.644.075-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.173.198-.298.298-.497.099-.198.05-.372-.025-.521-.075-.149-.669-1.611-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.009-.372-.011-.571-.011-.198 
-                            0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 
-                            1.694.626.712.227 1.36.195 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
-                        </svg>
-                    </a>
-                </div>
-            </div>
-
-            <!-- Middle -->
-            <div class="cols">
-                <div class="col">
-                    <h4>فریلنسر</h4>
-                    <a href="#">راهنمای شروع برای فریلنسر</a>
-                    <a href="#">پروفایل کاربری فریلنسر</a>
-                    <a href="#">پلن‌های همکاری برای فریلنسر</a>
-                    <a href="#">کافه فریلنسر</a>
-                </div>
-                <div class="col">
-                    <h4>کارفرما</h4>
-                    <a href="#">راهنمای شروع برای کارفرما</a>
-                    <a href="#">پروفایل کاربری کارفرما</a>
-                    <a href="#">پلن‌های همکاری برای کارفرما</a>
-                </div>
-                <div class="col">
-                    <h4>دسترسی سریع</h4>
-                    <a href="#">خانه</a>
-                    <a href="#">فروشگاه</a>
-                    <a href="#">درباره ما</a>
-                    <a href="#">تماس با ما</a>
-                </div>
-                <div class="col enamad">
-                    
-                    <a href="#"><img src="./assets/img/Enemad.png" alt=""></a>
-                </div>
-            </div>
-
-            <!-- Bottom -->
-            <div class="bottom">کلیه حقوق این سایت متعلق به اسنپ‌برند می‌باشد</div>
-        </div>
-    </footer>
-
-<script src="./assets/js/profile-freelancer.js"></script>
-
-</body>
-
-</html>
