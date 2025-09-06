@@ -1,0 +1,47 @@
+
+:root{
+  --primary:#003DFF;
+  --pink:#FF00F9;
+  --yellow:#FFFF00;
+  --text:#0f172a;
+  --muted:#64748b;
+  --border:#e5e7eb;
+  --bg:#f8fafc;
+  --radius:16px;
+}
+*{box-sizing:border-box}
+body{margin:0; background:var(--bg); color:var(--text); font-family:Vazirmatn, IRANSans, system-ui, Segoe UI, Arial}
+a{color:var(--primary); text-decoration:none}
+a:hover{text-decoration:underline}
+.wrapper{min-height:100dvh; display:grid; place-items:center; padding:24px}
+.card{
+  width:min(300px, 100vw);
+  background:#fff; border:1px solid var(--border); border-radius:var(--radius);
+  padding:20px; box-shadow:0 6px 20px rgba(0,0,0,.04);
+}
+.card img{
+          height: 50px;
+          padding-right: 40px;
+          
+        }
+.logo{display:flex; gap:10px; align-items:center; justify-content:center; margin-bottom:12px; color:var(--primary); font-weight:900; font-size:22px}
+.logo i{width:14px;height:14px;border-radius:4px;background:var(--pink); display:inline-block}
+.title{font-weight:900; font-size:22px; text-align:center; margin:8px 0 4px ; text-align: right;}
+.subtitle{color:var(--muted); font-size:14px; text-align:center; margin-bottom:18px ; text-align: right; margin-top: 70px;}
+.form{display:flex; flex-direction:column; gap:12px}
+.input, select{
+  height:44px; padding:0 14px; border:1px solid var(--border); border-radius:12px; outline:none; width:100%;
+  background:#fff;
+}
+.input:focus{border-color:var(--primary); box-shadow:0 0 0 3px #003dff22}
+.btn{height:46px; border-radius:12px; border:0; background:var(--primary); color:#fff; cursor:pointer; font-weight:800}
+.btn:disabled{opacity:.5; cursor:not-allowed}
+.sep{display:flex; align-items:center; gap:10px; color:#94a3b8; font-size:12px; margin:8px 0}
+.sep:before,.sep:after{content:""; flex:1; height:1px; background:var(--border)}
+.switch-auth{display:flex; justify-content:center; gap:10px; margin-top:14px; font-size:14px}
+.helper{font-size:12px; color:#ef4444; min-height:18px}
+.footer{margin-top:14px; text-align:center; font-size:12px; color:var(--muted)}
+.badge{background:#eef2ff; color:var(--primary); padding:2px 8px; border-radius:999px; font-size:11px; font-weight:800}
+.sms-row{display:flex; gap:8px; align-items:center}
+.otp{letter-spacing:8px; text-align:center; font-size:20px}
+.timer{color:var(--muted); font-size:12px}
